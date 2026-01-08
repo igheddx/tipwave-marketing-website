@@ -26,6 +26,7 @@ Add these secrets to your GitHub repository settings (Settings → Secrets and v
 
 - **S3 Bucket**: `tipwave-marketing-site`
 - **CloudFront Distribution ID**: `E2XIM4NN5SEMR7`
+- **Domain**: `www.tipply.live`
 - **Bucket Region**: `us-east-1`
 
 ### S3 Bucket Configuration
