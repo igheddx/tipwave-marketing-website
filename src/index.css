@@ -10,15 +10,15 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-tipwave-blue text-white rounded-lg font-semibold hover:bg-blue-600 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply px-6 py-3 bg-tipwave-teal text-white rounded-lg font-semibold hover:bg-teal-600 transition-all duration-200 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-emerald text-white rounded-lg font-semibold hover:bg-green-600 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply px-6 py-3 bg-tipwave-magenta text-white rounded-lg font-semibold hover:bg-pink-600 transition-all duration-200 shadow-md hover:shadow-lg;
   }
   
   .btn-outline {
-    @apply px-6 py-3 border-2 border-tipwave-blue text-tipwave-blue rounded-lg font-semibold hover:bg-tipwave-blue hover:text-white transition-all duration-200;
+    @apply px-6 py-3 border-2 border-tipwave-teal text-tipwave-teal rounded-lg font-semibold hover:bg-tipwave-teal hover:text-white transition-all duration-200;
   }
   
   .section-container {

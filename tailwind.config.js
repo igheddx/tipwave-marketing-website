@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        'tipwave-blue': '#1A73E8',
+        'tipwave-teal': '#1DBBB4',
+        'tipwave-magenta': '#E91E8C',
         'deep-charcoal': '#111827',
-        'emerald': '#10B981',
         'soft-gray': '#F9FAFB',
       },
     },

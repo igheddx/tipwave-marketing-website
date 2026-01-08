@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TipwaveLogo from './assets/tipwave-logo2.png'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -9,14 +10,14 @@ function App() {
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-tipwave-blue">
-              Tipwave
+            <div className="h-12 w-auto">
+              <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
             </div>
             <div className="hidden md:flex space-x-8 items-center">
-              <a href="#features" className="text-deep-charcoal hover:text-tipwave-blue transition">Features</a>
-              <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-blue transition">How It Works</a>
-              <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-blue transition">Reviews</a>
-              <a href="#live-artists" className="text-deep-charcoal hover:text-tipwave-blue transition">Live Artists</a>
+              <a href="#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
+              <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
+              <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
+              <a href="#live-artists" className="text-deep-charcoal hover:text-tipwave-teal transition">Live Artists</a>
               <button className="btn-secondary">Artist Sign In</button>
             </div>
           </div>
@@ -41,7 +42,7 @@ function App() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search artists by stage name…"
-                className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-tipwave-blue focus:outline-none shadow-lg"
+                className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-tipwave-teal focus:outline-none shadow-lg"
               />
               <svg className="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -67,7 +68,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
             <div className="card text-center">
-              <div className="w-16 h-16 bg-emerald rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-tipwave-teal rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
@@ -80,7 +81,7 @@ function App() {
 
             {/* Feature 2 */}
             <div className="card text-center">
-              <div className="w-16 h-16 bg-tipwave-blue rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-tipwave-magenta rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                 </svg>
@@ -93,7 +94,7 @@ function App() {
 
             {/* Feature 3 */}
             <div className="card text-center">
-              <div className="w-16 h-16 bg-emerald rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-tipwave-teal rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                 </svg>
@@ -121,7 +122,7 @@ function App() {
               </p>
               <button className="btn-primary">Get Started Free</button>
             </div>
-            <div className="bg-gradient-to-br from-tipwave-blue to-emerald rounded-2xl h-96 flex items-center justify-center shadow-2xl">
+            <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
@@ -227,7 +228,7 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-tipwave-blue to-emerald text-white">
+      <section className="bg-gradient-to-r from-tipwave-teal to-tipwave-magenta text-white">
         <div className="section-container text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Get Paid?</h2>
           <p className="text-2xl mb-8 opacity-90">
@@ -237,10 +238,10 @@ function App() {
             No credit card required • Free to start • 2 minutes setup
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-tipwave-blue px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+            <button className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
               Get Started for Free
             </button>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-tipwave-blue transition">
+            <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-tipwave-teal transition">
               Contact Us
             </button>
           </div>
@@ -252,7 +253,9 @@ function App() {
         <div className="section-container">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="text-2xl font-bold text-tipwave-blue mb-4">Tipwave</div>
+              <div className="h-12 w-auto mb-4">
+                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
+              </div>
               <p className="text-gray-400">
                 Empowering live performers with instant, secure tips and song requests.
               </p>
