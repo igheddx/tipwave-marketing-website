@@ -52,12 +52,12 @@ jobs:
       - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id E2XIM4NN5SEMR7 \
+            --distribution-id E1A1XL1M7T76EZ \
             --paths "/*"
 
       - name: Deployment Summary
         run: |
           echo "✅ Deployment Complete!"
           echo "📦 S3 Bucket: tipwave-marketing-site"
-          echo "🌐 CloudFront Distribution: E2XIM4NN5SEMR7"
-          echo "🔗 URL: https://tipwave.io (or your custom domain)"
+          echo "🌐 CloudFront Distribution: E1A1XL1M7T76EZ"
+          echo "🔗 URL: https://tipply.live (or your custom domain)"
