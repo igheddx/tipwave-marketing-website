@@ -25,7 +25,7 @@ Add these secrets to your GitHub repository settings (Settings → Secrets and v
 ### AWS Resources
 
 - **S3 Bucket**: `tipwave-marketing-site`
-- **CloudFront Distribution ID**: `E1A1XL1M7T76EZ`
+- **CloudFront Distribution ID**: `E1J1EDL894AO8K`
 - **Domain**: `www.tipply.live`
 - **Bucket Region**: `us-east-1`
 
@@ -71,7 +71,7 @@ Your S3 bucket should be configured as follows:
 
 ### CloudFront Configuration
 
-- **Distribution ID**: `E1A1XL1M7T76EZ`
+- **Distribution ID**: `E1J1EDL894AO8K`
 - **Origin**: `tipwave-marketing-site.s3.us-east-1.amazonaws.com`
 - **Viewer Protocol Policy**: Redirect HTTP to HTTPS
 - **Compress Objects Automatically**: ✅ Enabled
@@ -102,7 +102,7 @@ aws s3 sync dist/ s3://tipwave-marketing-site --delete
 
 # Invalidate CloudFront
 aws cloudfront create-invalidation \
-  --distribution-id E1A1XL1M7T76EZ \
+  --distribution-id E1J1EDL894AO8K \
   --paths "/*"
 ```
 
