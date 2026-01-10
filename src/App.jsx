@@ -238,17 +238,20 @@ function App() {
         </div>
       </section>
 
-      {/* No Hardware Needed Section */}
+      {/* A Tip You Can Feel Section */}
       <section id="how-it-works" className="bg-soft-gray">
         <div className="section-container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">No Hardware Needed</h2>
+              <h2 className="text-4xl font-bold mb-6">A Tip You Can Feel</h2>
               <p className="text-xl text-gray-600 mb-6">
-                Tipwave runs entirely on your phone. No expensive terminals, no complicated setup, no hidden fees.
+                Tipwave isn't just digital — it's alive in the room.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                When a fan sends a tip, your Tipwave device lights up or plays a celebratory sound, turning appreciation into a moment everyone can feel.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                Just open the app, share your link or QR code, and start receiving tips and song requests instantly. Your fans tap their phone, and you get paid—simple as that.
+                A tap on their phone becomes a spark on your stage.
               </p>
               <button className="btn-primary">Get Started Free</button>
             </div>
