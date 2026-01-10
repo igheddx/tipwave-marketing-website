@@ -11,11 +11,12 @@ By accessing or using Tipwave, you agree to be bound by these Terms. If you do n
 
 ## 1. About Tipwave
 
-Tipwave is a platform that enables live performers to receive digital tips and song requests from their audiences. Our service includes:
+Tipwave is a hardware and software platform that enables live performers to receive digital tips and song requests from their audiences. Our service includes:
 
-- **Hardware devices** that light up or play sounds when tips are received
-- **Mobile and web applications** for performers to manage their profiles and earnings
-- **Payment processing** through Stripe to securely handle transactions
+- **Tipwave Hardware Device:** An 11x6 inch LED IoT cylinder that displays animated light effects when tips are received, creating real-time audience feedback
+- **QR Code Registration:** Each device comes with a unique QR code that audiences scan to access the tipping interface
+- **Mobile and web applications** for performers to manage their profiles, view requests, track earnings, and control device settings
+- **Payment processing** through Stripe to securely handle all transactions
 
 ---
 
@@ -46,10 +47,12 @@ You are responsible for maintaining the confidentiality of your account credenti
 
 As a performer, you agree to:
 
-- **Use the hardware responsibly.** Do not tamper with, modify, or attempt to reverse-engineer Tipwave devices.
-- **Provide lawful performances.** You are solely responsible for the content of your performances and interactions with your audience.
-- **Comply with all applicable laws,** including laws related to employment, taxes, and content regulation.
-- **Pay your own taxes.** Tipwave does not withhold taxes on your behalf. You are responsible for reporting and paying all applicable taxes on your earnings.
+- **Care for your hardware responsibly.** Your Tipwave device is a connected IoT device. Do not tamper with, modify, disassemble, or attempt to reverse-engineer the device. Do not expose it to extreme temperatures, moisture, or physical damage.
+- **Use the device as intended.** Your Tipwave device is designed to display animated light effects in response to tips and requests. You agree to use it only for this purpose during live performances.
+- **Maintain QR code security.** Your unique QR code is tied to your account and device. Do not share it with unauthorized individuals or use it outside of your own performances.
+- **Provide lawful performances.** You are solely responsible for the content of your performances and interactions with your audience. Tipwave is not responsible for performance content or any disputes between you and your audience.
+- **Comply with all applicable laws,** including laws related to employment, business licensing, accessibility requirements, and content regulation.
+- **Pay your own taxes.** Tipwave does not withhold taxes on your behalf. You are responsible for reporting and paying all applicable taxes on your earnings. You acknowledge that you may be classified as an independent contractor.
 
 ### 3.2 Audience Responsibilities
 
@@ -91,13 +94,27 @@ See our [Refund & Return Policy](#) for more details.
 
 ## 5. Hardware Devices
 
-### 5.1 Ownership
+### 5.1 Hardware Purchase and Ownership
 
-When you purchase a Tipwave device, you own the physical hardware. However, the software and firmware embedded in the device remain the property of Tipwave Technologies, LLC.
+When you purchase a Tipwave device, you own the physical hardware. However, the software, firmware, and all designs and intellectual property embedded in or related to the device remain the sole property of Tipwave Technologies, LLC. Your purchase grants you a personal, non-exclusive, non-transferable license to use the device for receiving tips and song requests in accordance with these Terms.
 
-### 5.2 Warranty
+### 5.2 Device Warranty and Support
 
-Tipwave devices come with a **3-month limited warranty** covering manufacturing defects. See our [Refund & Return Policy](#) for details.
+Tipwave devices come with a **3-month limited warranty** covering manufacturing defects that occur under normal use. This warranty covers:
+- Hardware malfunctions (e.g., LED display failures, connectivity issues)
+- Defects in materials or workmanship
+- Faulty components
+
+The warranty does **notrepair, or reverse-engineer the device or its firmware
+- Use the device for purposes other than receiving tips and song requests from audiences
+- Attempt to bypass or tamper with the device's hardware, software, or security features
+- Sell, resell, loan, or transfer your device to another person without Tipwave's written consent
+- Use the device in any commercial manner other than live performance (e.g., you may not rent it out or use it as inventory for resale)
+- Attempt to circumvent payment processing, disable security features, or manipulates
+- Normal wear and tear
+- Misuse or failure to follow care instructions
+
+Within the warranty period, we will repair or replace defective devices at no cost. See our Refund & Return Policy for complete details.
 
 ### 5.3 Prohibited Actions
 
@@ -184,13 +201,26 @@ Either party may seek injunctive relief in court to protect intellectual propert
 
 ---
 
-## 12. Changes to These Terms
+## 12. No Earnings Guarantee
+
+Tipwave facilitates the acceptance of tips and song requests, but does not guarantee that you will earn any particular amount of money. Earnings depend on factors beyond Tipwave's control, including:
+- Your performance quality and frequency
+- Your audience size and engagement
+- Your venue and local market conditions
+- Your marketing and promotional efforts
+- Audience preferences and generosity
+
+Tipwave makes no representations about earnings potential or future income.
+
+---
+
+## 13. Changes to These Terms
 
 We may update these Terms from time to time. If we make material changes, we will notify you by email or through the Tipwave platform. Your continued use of Tipwave after the changes take effect constitutes your acceptance of the updated Terms.
 
 ---
 
-## 13. Contact Us
+## 14. Contact Us
 
 If you have questions about these Terms, please contact us:
 

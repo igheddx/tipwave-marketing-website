@@ -11,12 +11,13 @@ By using Tipwave, you agree to comply with this AUP. Violation of this policy ma
 
 ## 1. Purpose of This Policy
 
-Tipwave is designed to help live performers connect with their audiences and receive appreciation through tips and song requests. We want to create a safe, respectful, and lawful environment for everyone.
+Tipwave is a hardware and software platform designed for live performers to receive tips and song requests from their audiences through an elegant, real-time experience. We want to create a safe, respectful, and lawful environment for all users.
 
 This policy ensures that Tipwave is used in a way that:
-- Respects the rights and safety of others
-- Complies with applicable laws
-- Maintains the integrity of our platform
+- Respects the rights and safety of performers, audiences, and the community
+- Complies with all applicable laws and regulations
+- Maintains the integrity and security of our hardware devices and platform
+- Protects the experience and emotional connection that Tipwave creates
 
 ---
 
@@ -52,10 +53,11 @@ You may **not** use Tipwave for any of the following purposes:
 
 ### 2.5 Misuse of Hardware
 
-- Tampering with, modifying, or attempting to reverse-engineer Tipwave devices
-- Using Tipwave devices for purposes other than receiving tips and song requests
-- Attempting to bypass payment systems, disable security features, or manipulate device functionality
-- Damaging or destroying Tipwave hardware intentionally
+- **Do not tamper with the device.** Do not disassemble, modify, repair, or attempt to reverse-engineer your Tipwave hardware device.
+- **Do not alter functionality.** Do not attempt to change how the device responds to tips, disable security features, or manipulate the firmware.
+- **Illegal hardware use.** Do not use the device for illegal purposes or to facilitate illegal activity.
+- **No unauthorized transfers.** Do not sell, gift, loan, or transfer your device to another person without Tipwave's written consent.
+- **Venue compliance.** You are responsible for ensuring your device use complies with venue policies, local regulations, and any applicable permits or licenses.
 
 ### 2.6 Payment System Abuse
 

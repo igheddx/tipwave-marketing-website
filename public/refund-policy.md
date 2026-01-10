@@ -11,21 +11,24 @@ At Tipwave Technologies, LLC ("Tipwave," "we," "us," or "our"), we want you to b
 
 ### 1.1 30-Day Return Window
 
-If you are not satisfied with your Tipwave hardware device, you may return it within **30 days** of the original purchase date for a full refund, provided that:
+If you are not satisfied with your Tipwave hardware device, you may return it within **30 days** of the original purchase date for a full refund of the device purchase price, provided that:
 
-- The device is in its original condition with all accessories and packaging
-- The device has not been damaged, modified, or tampered with
-- You provide proof of purchase (e.g., order confirmation or receipt)
+- The device is in original, unaltered condition with all accessories, cables, and original packaging
+- The device has not been modified, tampered with, or reverse-engineered
+- The device shows no signs of misuse, physical damage, or exposure to extreme conditions
+- You provide proof of purchase (order number or receipt)
+
+Refunds are limited to the hardware device purchase price. Shipping costs and any applicable taxes paid are non-refundable.
 
 ### 1.2 How to Initiate a Return
 
-To return a device, please contact us at **support@tipwave.live** with the following information:
+To return a device, please contact us at **support@tipwave.live** with:
 
 - Your order number or proof of purchase
 - The reason for the return
-- Photos of the device and packaging (if applicable)
+- Photos of the device, all accessories, and original packaging
 
-We will provide you with return instructions and a return authorization (RA) number.
+We will provide return instructions and a return authorization (RA) number. Returns without proper authorization may not be accepted.
 
 ### 1.3 Shipping Costs for Returns
 
@@ -44,21 +47,24 @@ Please note that it may take an additional 5-10 business days for the refund to 
 
 ### 2.1 3-Month Limited Warranty
 
-All Tipwave hardware devices come with a **3-month limited warranty** from the date of purchase. This warranty covers manufacturing defects, including:
+All Tipwave hardware devices come with a **3-month limited warranty** from the date of purchase. This warranty covers **manufacturing defects** that occur under normal, lawful use, including:
 
-- Hardware malfunctions that occur under normal use
+- Hardware malfunctions affecting LED display, light-up functionality, or device responsiveness
 - Defects in materials or workmanship
-- Faulty components (e.g., lights, speakers, connectivity issues)
+- Component failures (LEDs, connectivity modules, power systems)
+- Firmware bugs that prevent core functionality
 
 ### 2.2 What the Warranty Does NOT Cover
 
 The warranty does **not** cover:
 
-- Damage caused by misuse, abuse, or neglect
-- Damage from accidents, water exposure, or physical impact
-- Modifications, tampering, or unauthorized repairs
-- Normal wear and tear
-- Software issues unrelated to the hardware (software updates may be provided separately)
+- Damage from accidents, physical impact, water exposure, extreme temperatures, or environmental factors
+- Modifications, tampering, disassembly, or unauthorized repairs
+- Misuse, abuse, or failure to follow care instructions
+- Normal wear and tear (cosmetic scratches, fading over time)
+- Software or firmware issues unrelated to hardware defects
+- Damage occurring after the 3-month warranty period expires
+- Loss or theft of the device
 
 ### 2.3 How to File a Warranty Claim
 
@@ -69,14 +75,14 @@ If you believe your device is defective and covered under warranty, please conta
 - Photos or videos showing the defect (if applicable)
 
 We will review your claim and, if approved, provide instructions for returning the device.
+Tipwave will, at our sole discretion:
 
-### 2.4 Warranty Remedies
+- **Repair the device** and ship it back to you at no charge, or
+- **Replace the device** with a new or refurbished unit of equal or greater value
 
-If your warranty claim is approved, we will, at our discretion:
+We will cover the cost of return shipping for approved warranty claims. Warranty repairs may take 5-10 business days plus shipping time.
 
-- **Repair the device** and return it to you at no charge, or
-- **Replace the device** with a new or refurbished unit
-
+If we are unable to repair or replace the device, we may issue a refund of the original device purchase price (minus any applicable taxes and original shipping costs you paid)
 We will cover the cost of return shipping for warranty claims.
 
 If we are unable to repair or replace the device, we may issue a full refund.
@@ -91,32 +97,39 @@ Digital tips processed through Tipwave are **non-refundable**. Tips are voluntar
 
 ### 3.2 Exceptions
 
-We will review refund requests on a **case-by-case basis** in the following situations:
+We will review refund requests on a **case-by-case basis** in the following limited circumstances:
 
-- **Accidental duplicate tip:** If you accidentally sent the same tip multiple times
-- **Fraudulent activity:** If your payment method was used without your authorization
-- **Clear error:** If a technical error resulted in an incorrect tip amount
+- **Accidental duplicate tip:** If a system error caused you to send the same tip multiple times in quick succession
+- **Fraudulent activity:** If your payment method was used without your authorization or knowledge
+- **Clear technical error:** If a documented technical error resulted in an incorrect tip amount being charged
+- **Unauthorized performer claim:** If a performer claims they did not authorize a specific tip
 
-To request a refund for a digital tip, please contact us at **support@tipwave.live** within **7 days** of the transaction with:
+To request a digital tip refund, please contact us at **support@tipwave.live** within **7 days** of the transaction with:
 
-- The date and amount of the tip
-- The performer's name or account information
-- A detailed explanation of why you believe a refund is warranted
+- The exact date and time of the transaction
+- The tip amount
+- The performer's name or Tipwave account information
+- A detailed explanation with evidence of your claim
 
-We will investigate your request and respond within 3-5 business days. If we approve the refund, it will be processed to your original payment method within 5-7 business days.
+We will investigate your request and respond within 5 business days. Investigations may include reviewing transaction logs, device activity, and any supporting documentation you provide.
 
 ### 3.3 Fraudulent or Abusive Refund Requests
 
 Refund requests that we determine to be fraudulent, abusive, or made in bad faith may result in suspension or termination of your account.
 
----
+--# 4.1 Damaged or Defective Upon Arrival
 
-## 4. Damaged or Defective Devices Upon Arrival
+If your Tipwave device arrives damaged, non-functional, or defective, please contact us **within 7 days** of delivery. We will:
 
-If your Tipwave device arrives damaged or defective, please contact us **within 7 days** of delivery at **support@tipwave.live**. We will:
+- **Replace the device** at no cost to you with expedited shipping, or
+- **Refund your purchase** in full, including original shipping costs
 
-- Replace the device at no cost to you, or
-- Issue a full refund, including shipping costs
+Please include:
+- Photos and videos showing the damage or defect
+- Unboxing photos if possible to document the condition upon arrival
+- Description of the specific issue
+
+We will prioritize these cases and respond within 1 business day
 
 Please include photos of the damaged device and packaging to expedite the process.
 

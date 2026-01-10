@@ -33,12 +33,14 @@ We may receive limited information from Stripe, such as:
 
 ### 1.3 Device and Usage Information
 
-We automatically collect certain information when you use Tipwave, including:
+When you use Tipwave's hardware device and platform, we automatically collect certain information:
 
-- **Device information:** Device type, operating system, browser type
-- **Usage data:** Pages visited, features used, time spent on the platform
-- **IP address and location data:** To improve security and provide localized services
-- **Cookies and analytics:** We use cookies and similar technologies to analyze usage patterns and improve our service
+- **Device information:** Type of device, hardware serial number, device registration and connectivity status
+- **Performance data:** Tip activity, device light-up events, song request data, usage patterns
+- **Web/app activity:** Pages visited, features used, time spent on the platform, clicks, navigation patterns
+- **Technical data:** IP address, device type, operating system, browser type, timestamps
+- **Location data:** We may collect approximate location to improve service delivery and provide localized features
+- **Cookies and analytics:** We use cookies and similar technologies to remember preferences, analyze usage patterns, and improve our service
 
 ### 1.4 Communications
 
@@ -85,10 +87,11 @@ We do **not** sell your personal information. We share your data only in the fol
 
 We share data with trusted third-party service providers who help us operate Tipwave, including:
 
-- **Stripe:** For payment processing
-- **Cloud hosting providers:** For secure data storage (e.g., AWS)
+- **Stripe:** For payment processing and secure financial transactions
+- **Cloud hosting and IoT infrastructure providers:** For secure data storage and device connectivity (e.g., AWS, device management platforms)
 - **Email service providers:** For transactional and marketing emails
-- **Analytics providers:** To understand how our platform is used
+- **Analytics and performance monitoring providers:** To understand how our platform and hardware devices are used
+- **Device manufacturers and firmware providers:** To ensure hardware functionality and security updates
 
 These providers are contractually obligated to protect your data and use it only for the purposes we specify.
 
@@ -219,7 +222,22 @@ The "Last Updated" date at the top of this page indicates when this Privacy Poli
 
 ---
 
-## 12. Contact Us
+## 10. Tipwave Hardware Device Privacy
+
+Your Tipwave hardware device collects and communicates certain performance data back to our platform to display tips, manage requests, and update device settings. This includes:
+
+- Timestamps of tip events
+- Light-up animations and device state
+- Song request and acceptance data
+- Device connectivity and firmware version information
+
+This data is encrypted during transmission and storage. Your hardware device does **not** include microphones, cameras, or any form of audio/video recording capability.
+
+You can review and delete historical device performance data through your account dashboard at any time.
+
+---
+
+## 11. Contact Us
 
 If you have questions or concerns about this Privacy Policy, please contact us:
 
