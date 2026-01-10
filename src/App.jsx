@@ -1,8 +1,99 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import TipwaveLogo from './assets/tipwave-logo2.png'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [isSearching, setIsSearching] = useState(false)
+  const [showResults, setShowResults] = useState(false)
+  const searchTimeoutRef = useRef(null)
+  const resultsRef = useRef(null)
+
+  // Determine app URL based on environment
+  const getAppUrl = () => {
+    const hostname = window.location.hostname
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+      return 'http://localhost:3000'
+    }
+    return 'https://app.tipply.live'
+  }
+
+  // Determine backend API URL based on environment
+  const getApiUrl = () => {
+    const hostname = window.location.hostname
+    if (hostname === 'localhost' || hostname === '127.0.0.1') {
+      return 'http://localhost:5000'
+    }
+    return 'https://uhxejjh8s1.execute-api.us-east-1.amazonaws.com/dev'
+  }
+
+  const appUrl = getAppUrl()
+  const apiUrl = getApiUrl()
+
+  // Search performers
+  const searchPerformers = async (query) => {
+    if (query.length < 3) {
+      setSearchResults([])
+      setShowResults(false)
+      return
+    }
+
+    setIsSearching(true)
+    try {
+      const response = await fetch(`${apiUrl}/api/performersearch?query=${encodeURIComponent(query)}`)
+      if (response.ok) {
+        const data = await response.json()
+        setSearchResults(data)
+        setShowResults(true)
+      } else {
+        console.error('Search failed:', response.status)
+        setSearchResults([])
+      }
+    } catch (error) {
+      console.error('Search error:', error)
+      setSearchResults([])
+    } finally {
+      setIsSearching(false)
+    }
+  }
+
+  // Handle search input change with debounce
+  const handleSearchChange = (e) => {
+    const value = e.target.value
+    setSearchQuery(value)
+
+    // Clear existing timeout
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current)
+    }
+
+    // Set new timeout for search
+    if (value.length >= 3) {
+      searchTimeoutRef.current = setTimeout(() => {
+        searchPerformers(value)
+      }, 300) // 300ms debounce
+    } else {
+      setSearchResults([])
+      setShowResults(false)
+    }
+  }
+
+  // Handle clicking outside to close results
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (resultsRef.current && !resultsRef.current.contains(event.target)) {
+        setShowResults(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  // Navigate to performer tip page
+  const navigateToPerformer = (deviceId) => {
+    window.location.href = `${appUrl}/tip/${deviceId}`
+  }
 
   return (
     <div className="min-h-screen">
@@ -18,7 +109,7 @@ function App() {
               <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
               <a href="#live-artists" className="text-deep-charcoal hover:text-tipwave-teal transition">Live Artists</a>
-              <button className="btn-secondary">Artist Sign In</button>
+              <a href={`${appUrl}/login`} className="btn-secondary">Artist Sign In</a>
             </div>
           </div>
         </div>
@@ -35,23 +126,55 @@ function App() {
           </p>
           
           {/* Search Box */}
-          <div className="max-w-2xl mx-auto mb-8">
+          <div className="max-w-2xl mx-auto mb-8 relative" ref={resultsRef}>
             <div className="relative">
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={handleSearchChange}
                 placeholder="Search artists by stage name…"
                 className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-tipwave-teal focus:outline-none shadow-lg"
+                onFocus={() => searchQuery.length >= 3 && searchResults.length > 0 && setShowResults(true)}
               />
-              <svg className="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
+              {isSearching ? (
+                <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-tipwave-teal"></div>
+                </div>
+              ) : (
+                <svg className="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              )}
             </div>
+
+            {/* Search Results Dropdown */}
+            {showResults && searchResults.length > 0 && (
+              <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 max-h-96 overflow-y-auto z-50">
+                {searchResults.map((performer, index) => (
+                  <div
+                    key={index}
+                    onClick={() => navigateToPerformer(performer.deviceId)}
+                    className="px-6 py-4 hover:bg-soft-gray cursor-pointer transition border-b border-gray-100 last:border-b-0"
+                  >
+                    <div className="font-bold text-deep-charcoal text-lg">{performer.stageName}</div>
+                    {performer.bio && (
+                      <div className="text-gray-600 text-sm mt-1 line-clamp-2">{performer.bio}</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* No Results Message */}
+            {showResults && searchQuery.length >= 3 && searchResults.length === 0 && !isSearching && (
+              <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 p-6 z-50">
+                <p className="text-gray-600 text-center">No artists found matching "{searchQuery}"</p>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary text-lg px-8 py-4">Artist Sign Up</button>
+            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">Artist Sign Up</a>
             <button className="btn-outline text-lg px-8 py-4">See Who's Live</button>
           </div>
         </div>
