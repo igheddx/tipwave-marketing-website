@@ -9,8 +9,11 @@ function App() {
   const searchTimeoutRef = useRef(null)
   const resultsRef = useRef(null)
 
-  // Determine app URL based on environment
+  // Determine app URL based on environment with env override
   const getAppUrl = () => {
+    const envAppUrl = import.meta.env.VITE_APP_URL
+    if (envAppUrl) return envAppUrl
+
     const hostname = window.location.hostname
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:3000'
@@ -18,8 +21,11 @@ function App() {
     return 'https://app.tipply.live'
   }
 
-  // Determine backend API URL based on environment
+  // Determine backend API URL based on environment with env override
   const getApiUrl = () => {
+    const envApiUrl = import.meta.env.VITE_API_URL
+    if (envApiUrl) return envApiUrl
+
     const hostname = window.location.hostname
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:5000'
