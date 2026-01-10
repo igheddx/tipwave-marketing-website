@@ -126,10 +126,13 @@ function App() {
       <section className="bg-gradient-to-br from-white to-soft-gray pt-20 pb-32">
         <div className="section-container text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">
-            Get Paid for Your Performance
+            Get Paid — And Feel the Moment
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Tipwave empowers live performers with instant, secure tips and song requests from your audience—no hardware required.
+            Tipwave empowers live performers with instant, secure tips and song requests that light up your device the moment your audience shows their support.
+          </p>
+          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto italic">
+            This keeps the emotional core front and center: you don't just get paid — you feel it.
           </p>
           
           {/* Search Box */}
