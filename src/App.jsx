@@ -30,6 +30,7 @@ function App() {
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:5000'
     }
+    // Fallback: Tipply backend BaseUrl (from backend appsettings)
     return 'https://uhxejjh8s1.execute-api.us-east-1.amazonaws.com/dev'
   }
 
