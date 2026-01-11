@@ -417,10 +417,10 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition">Acceptable Use</a></li>
-                <li><a href="#" className="hover:text-white transition">Refund Policy</a></li>
+                <li><a href="/terms-of-service.html" className="hover:text-white transition">Terms of Service</a></li>
+                <li><a href="/privacy-policy.html" className="hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="/acceptable-use-policy.html" className="hover:text-white transition">Acceptable Use</a></li>
+                <li><a href="/refund-policy.html" className="hover:text-white transition">Refund Policy</a></li>
               </ul>
             </div>
           </div>
