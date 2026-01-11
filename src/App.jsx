@@ -126,13 +126,13 @@ function App() {
       <section className="bg-gradient-to-br from-white to-soft-gray pt-20 pb-32">
         <div className="section-container text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">
-            Your Device Lights Up. Your Audience Feels It. You Get Paid.
+            Every Tip Becomes a Spark. Every Moment, Unforgettable.
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Tipwave is a physical LED device that brings the magic of live performance to life. When your audience sends a tip or requests a song, your device instantly lights up with animated colors and celebratory sounds—creating a shared, real-time moment of joy and connection.
+            Tipwave transforms digital appreciation into something you can see, hear, and feel. When your audience tips, your device erupts with light and sound—a physical celebration that fills the room and fuels your performance. You don't just get paid. You feel seen.
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto italic">
-            No passive notifications. No hidden screens. Just pure, physical magic on stage.
+            This is live performance, electrified. No hidden notifications. No silence. Just pure, radiant connection between you and your fans.
           </p>
           
           {/* Search Box */}
@@ -195,7 +195,7 @@ function App() {
         <div className="section-container">
           <h2 className="text-4xl font-bold text-center mb-4">The Tipwave Experience</h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            A hardware device that turns digital tips into unforgettable live moments
+            You pour your heart into every performance. Now, your audience's appreciation glows back at you—in real time, in living color.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -208,7 +208,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Instant Hardware Feedback</h3>
               <p className="text-gray-600">
-                Your Tipwave device lights up instantly when a fan tips. Multiple animations for different tip tiers create excitement and connection in real-time.
+                The moment a fan sends a tip, your device pulses with color and sound. Every tier has its own animation—building anticipation, celebrating generosity, and making every contribution feel monumental.
               </p>
             </div>
 
@@ -221,7 +221,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Song Requests on Demand</h3>
               <p className="text-gray-600">
-                Fans scan your QR code, choose a tip amount, and request their favorite song. You see requests in real-time and control your setlist.
+                Your fans want to hear you play their favorite song. With a scan and a tap, they make it happen. You see their request instantly, choose what to play, and give them a moment they'll never forget.
               </p>
             </div>
 
@@ -234,7 +234,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Secure Stripe Payments</h3>
               <p className="text-gray-600">
-                Powered by Stripe for safety. Your earnings are deposited directly to your account. No cash handling. No fees passed to fans.
+                Your earnings flow directly to you, protected by Stripe's world-class security. No cash. No confusion. Just fast, safe payouts so you can focus on what matters: your performance.
               </p>
             </div>
           </div>
@@ -248,15 +248,15 @@ function App() {
             <div>
               <h2 className="text-4xl font-bold mb-6">The Magic of Physical Feedback</h2>
               <p className="text-xl text-gray-600 mb-6">
-                Tipwave bridges the gap between digital and live performance.
+                You've felt the silence after a great set. The awkward moment when you wonder if they loved it.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Your audience sends a tip from their phone. In milliseconds, your device erupts with light and sound. Everyone on stage and in the room witnesses the connection, celebration, and energy.
+                With Tipwave, that silence turns into light. Your audience taps their screen. Your device erupts. Everyone sees it. Everyone feels it. The energy surges, the room lights up, and you know—instantly—that you're connecting.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                It's not a notification buried in your pocket. It's a moment. A spark. A shared, unforgettable experience.
+                This isn't a buzz in your pocket. It's a celebration on your stage. A visible, radiant thank-you that turns appreciation into pure energy.
               </p>
-              <button className="btn-primary">Start Your Tipwave Journey</button>
+              <button className="btn-primary">Bring Your Stage to Life</button>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +272,7 @@ function App() {
         <div className="section-container">
           <h2 className="text-4xl font-bold text-center mb-4">Everything You Need to Perform Better</h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            Tipwave gives you the tools to connect with fans and maximize your earnings
+            Tipwave doesn't just help you earn—it helps you connect, grow, and turn every show into something magical.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -281,7 +281,7 @@ function App() {
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-2xl font-bold mb-4">Live Request Queue</h3>
               <p className="text-gray-600">
-                Watch requests pour in on your app. Accept, decline, or move them around. Full control of your performance, moment to moment.
+                Requests flow in as you perform. See what your fans want to hear, accept the ones that feel right, and shape your set in real time. Your show, your choice, their joy.
               </p>
             </div>
 
@@ -290,7 +290,7 @@ function App() {
               <div className="text-4xl mb-4">🎸</div>
               <h3 className="text-2xl font-bold mb-4">Instant Feedback Loop</h3>
               <p className="text-gray-600">
-                Every tip triggers a real-time reaction on your Tipwave device, giving fans immediate gratification and performers a surge of energy that fuels the show.
+                Every tip is a jolt of joy. Your fans see their appreciation light up your stage. You feel their energy surge through the room. It's a loop of positivity that amplifies every performance.
               </p>
             </div>
 
@@ -299,7 +299,7 @@ function App() {
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold mb-4">Performance Insights</h3>
               <p className="text-gray-600">
-                Beautiful dashboard shows your earnings, top songs, most active fans, and performance trends. Data that helps you grow.
+                See what's working. Which songs resonate. Who your biggest supporters are. Your dashboard shows you the story behind your earnings, so you can grow smarter, not harder.
               </p>
             </div>
           </div>
@@ -368,10 +368,10 @@ function App() {
         <div className="section-container text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Feel the Magic?</h2>
           <p className="text-2xl mb-8 opacity-90">
-            Bring your performance to life with physical feedback
+            Turn every tip into a spark. Every show into an unforgettable moment.
           </p>
           <p className="text-lg mb-12 opacity-80">
-            No setup fees • Order your device today • Start performing tomorrow
+            Join the performers lighting up stages in Austin • Order your device today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
@@ -393,7 +393,7 @@ function App() {
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
-                Tipwave brings live performance to life through physical, instant feedback. Built for musicians, buskers, DJs, and performers everywhere.
+                Tipwave turns digital appreciation into physical magic. Built for live performers who deserve to feel seen, celebrated, and connected—every single show.
               </p>
             </div>
             
