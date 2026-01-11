@@ -115,7 +115,6 @@ function App() {
               <a href="#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href="#live-artists" className="text-deep-charcoal hover:text-tipwave-teal transition">Live Artists</a>
               <a href={`${appUrl}/login`} className="btn-secondary">Artist Sign In</a>
             </div>
           </div>
