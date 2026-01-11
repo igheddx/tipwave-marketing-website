@@ -259,7 +259,7 @@ function App() {
               <p className="text-lg text-gray-600 mb-8">
                 This isn't a buzz in your pocket. It's a celebration on your stage. A visible, radiant thank-you that turns appreciation into pure energy.
               </p>
-              <button className="btn-primary">Join Early Access</button>
+              <a href={`${appUrl}/onboarding`} className="btn-primary inline-block">Join Early Access</a>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -377,9 +377,9 @@ function App() {
             Limited prototype spots available in Austin, TX • Join the waitlist to become a founding performer
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+            <a href={`${appUrl}/onboarding`} className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
               Join the Waitlist
-            </button>
+            </a>
             <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-tipwave-teal transition">
               Learn More
             </button>
