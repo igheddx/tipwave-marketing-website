@@ -288,9 +288,9 @@ function App() {
             {/* Feature 2 */}
             <div className="card">
               <div className="text-4xl mb-4">🎸</div>
-              <h3 className="text-2xl font-bold mb-4">Band Mode: Share the Love</h3>
+              <h3 className="text-2xl font-bold mb-4">Instant Feedback Loop</h3>
               <p className="text-gray-600">
-                Playing with a band? Tips split automatically and fairly among all performers. Instant, transparent payouts to everyone.
+                Every tip triggers a real-time reaction on your Tipwave device, giving fans immediate gratification and performers a surge of energy that fuels the show.
               </p>
             </div>
 
