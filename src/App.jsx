@@ -131,8 +131,11 @@ function App() {
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
             Tipwave transforms digital appreciation into something you can see, hear, and feel. When your audience tips, your device erupts with light and sound—a physical celebration that fills the room and fuels your performance. You don't just get paid. You feel seen.
           </p>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto italic">
+          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto italic">
             This is live performance, electrified. No hidden notifications. No silence. Just pure, radiant connection between you and your fans.
+          </p>
+          <p className="text-base text-gray-500 mb-12 max-w-2xl mx-auto">
+            <strong>Now in Limited Prototype:</strong> Tipwave is currently being tested with select performers in Austin, TX. Join the waitlist to become a founding performer and help shape the future of live performance.
           </p>
           
           {/* Search Box */}
@@ -184,8 +187,8 @@ function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">Artist Sign Up</a>
-            <button className="btn-outline text-lg px-8 py-4">See Who's Live</button>
+            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">Join the Waitlist</a>
+            <button className="btn-outline text-lg px-8 py-4">See Prototype in Action</button>
           </div>
         </div>
       </section>
@@ -256,7 +259,7 @@ function App() {
               <p className="text-lg text-gray-600 mb-8">
                 This isn't a buzz in your pocket. It's a celebration on your stage. A visible, radiant thank-you that turns appreciation into pure energy.
               </p>
-              <button className="btn-primary">Bring Your Stage to Life</button>
+              <button className="btn-primary">Join Early Access</button>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -368,17 +371,17 @@ function App() {
         <div className="section-container text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Feel the Magic?</h2>
           <p className="text-2xl mb-8 opacity-90">
-            Turn every tip into a spark. Every show into an unforgettable moment.
+            Be among the first performers to experience Tipwave
           </p>
           <p className="text-lg mb-12 opacity-80">
-            Join the performers lighting up stages in Austin • Order your device today
+            Limited prototype spots available in Austin, TX • Join the waitlist to become a founding performer
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
-              Order Your Tipwave Device
+              Join the Waitlist
             </button>
             <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-tipwave-teal transition">
-              Watch Demo
+              Learn More
             </button>
           </div>
         </div>
@@ -393,7 +396,7 @@ function App() {
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
-                Tipwave turns digital appreciation into physical magic. Built for live performers who deserve to feel seen, celebrated, and connected—every single show.
+                Tipwave turns digital appreciation into physical magic. Currently in limited prototype with select Austin performers. Join the waitlist to help shape the future of live performance.
               </p>
             </div>
             
