@@ -341,7 +341,7 @@ function App() {
                 "My band plays three nights a week. With Tipwave, tips come in instantly, the device creates amazing energy on stage, and everyone gets paid automatically. Game-changer."
               </p>
               <div className="font-bold">Marcus Chen</div>
-              <div className="text-sm text-gray-500">Drummer, Nashville Band</div>
+              <div className="text-sm text-gray-500">Drummer, Austin, TX</div>
             </div>
 
             {/* Testimonial 3 */}
@@ -357,7 +357,7 @@ function App() {
                 "I busk downtown. The Tipwave device completely changed my street performance. Fans tip way more when they see the light show. Plus, it's secure and professional."
               </p>
               <div className="font-bold">Alex Rivera</div>
-              <div className="text-sm text-gray-500">Street Busker, Portland, OR</div>
+              <div className="text-sm text-gray-500">Street Busker, Austin, TX</div>
             </div>
           </div>
         </div>
@@ -400,9 +400,8 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">Sign Up</a></li>
-                <li><a href="#" className="hover:text-white transition">Login</a></li>
-                <li><a href="#live-artists" className="hover:text-white transition">Live Artists</a></li>
+                <li><a href={`${appUrl}/onboarding`} className="hover:text-white transition">Sign Up</a></li>
+                <li><a href={`${appUrl}/login`} className="hover:text-white transition">Login</a></li>
               </ul>
             </div>
             
