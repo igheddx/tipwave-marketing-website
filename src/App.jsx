@@ -129,7 +129,7 @@ function App() {
             Every Tip Becomes a Spark. Every Moment, Unforgettable.
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Tipwave transforms digital appreciation into something you can see, hear, and feel. When your audience tips, your device erupts with light and sound—a physical celebration that fills the room and fuels your performance. You don't just get paid. You feel seen.
+            Tipwave transforms digital appreciation into something you can see, hear, and feel. When your audience tips, your device erupts with light and sound. It's a physical celebration that fills the room and fuels your performance. You don't just get paid. You feel seen.
           </p>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto italic">
             This is live performance, electrified. No hidden notifications. No silence. Just pure, radiant connection between you and your fans.
@@ -198,7 +198,7 @@ function App() {
         <div className="section-container">
           <h2 className="text-4xl font-bold text-center mb-4">The Tipwave Experience</h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            You pour your heart into every performance. Now, your audience's appreciation glows back at you—in real time, in living color.
+            You pour your heart into every performance. Now, your audience's appreciation glows back at you in real time, in living color.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -211,7 +211,7 @@ function App() {
               </div>
               <h3 className="text-2xl font-bold mb-4">Instant Hardware Feedback</h3>
               <p className="text-gray-600">
-                The moment a fan sends a tip, your device pulses with color and sound. Every tier has its own animation—building anticipation, celebrating generosity, and making every contribution feel monumental.
+                The moment a fan sends a tip, your device pulses with color and sound. Every tier has its own animation, building anticipation, celebrating generosity, and making every contribution feel monumental.
               </p>
             </div>
 
@@ -254,7 +254,7 @@ function App() {
                 You've felt the silence after a great set. The awkward moment when you wonder if they loved it.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                With Tipwave, that silence turns into light. Your audience taps their screen. Your device erupts. Everyone sees it. Everyone feels it. The energy surges, the room lights up, and you know—instantly—that you're connecting.
+                With Tipwave, that silence turns into light. Your audience taps their screen. Your device erupts. Everyone sees it. Everyone feels it. The energy surges, the room lights up, and you know, instantly, that you're connecting.
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 This isn't a buzz in your pocket. It's a celebration on your stage. A visible, radiant thank-you that turns appreciation into pure energy.
@@ -275,7 +275,7 @@ function App() {
         <div className="section-container">
           <h2 className="text-4xl font-bold text-center mb-4">Everything You Need to Perform Better</h2>
           <p className="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            Tipwave doesn't just help you earn—it helps you connect, grow, and turn every show into something magical.
+            Tipwave doesn't just help you earn. It helps you connect, grow, and turn every show into something magical.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
