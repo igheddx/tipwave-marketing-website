@@ -38,14 +38,14 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync dist/ s3://tipwave-marketing-site \
+          aws s3 sync dist/ s3://tipwave-sites-bucket/marketing/ \
             --delete \
             --cache-control "max-age=3600" \
             --exclude "*.html" \
             --exclude ".DS_Store"
           
           # Deploy HTML files with no-cache
-          aws s3 sync dist/ s3://tipwave-marketing-site \
+          aws s3 sync dist/ s3://tipwave-sites-bucket/marketing/ \
             --include "*.html" \
             --cache-control "max-age=0, must-revalidate" \
             --content-type "text/html"
@@ -59,6 +59,6 @@ jobs:
       - name: Deployment Summary
         run: |
           echo "✅ Deployment Complete!"
-          echo "📦 S3 Bucket: tipwave-marketing-site"
+          echo "📦 S3 Bucket: tipwave-sites-bucket/marketing/"
           echo "🌐 CloudFront Distribution: E1J1EDL894AO8K"
-          echo "🔗 URL: https://tipply.live (or your custom domain)"
+          echo "🔗 URL: https://tipwave.live | https://www.tipwave.live"
