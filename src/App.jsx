@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import TipwaveLogo from './assets/tipwave-logo2.png'
+import logger from './utils/logger'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -53,11 +54,11 @@ function App() {
         setSearchResults(data)
         setShowResults(true)
       } else {
-        console.error('Search failed:', response.status)
+        logger.error('Search failed:', response.status)
         setSearchResults([])
       }
     } catch (error) {
-      console.error('Search error:', error)
+      logger.error('Search error:', error)
       setSearchResults([])
     } finally {
       setIsSearching(false)
