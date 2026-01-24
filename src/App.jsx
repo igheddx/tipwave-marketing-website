@@ -1,24 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TipwaveLogo from './assets/tipwave-logo2.png'
 import logger from './utils/logger'
+import AboutUs from './pages/AboutUs'
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [searchResults, setSearchResults] = useState([])
-  const [isSearching, setIsSearching] = useState(false)
-  const [showResults, setShowResults] = useState(false)
-  const [showWaitlistForm, setShowWaitlistForm] = useState(false)
-  const [waitlistForm, setWaitlistForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: ''
-  })
-  const [waitlistSubmitting, setWaitlistSubmitting] = useState(false)
-  const [waitlistMessage, setWaitlistMessage] = useState('')
-  const searchTimeoutRef = useRef(null)
-  const resultsRef = useRef(null)
-
   // Determine app URL based on environment with env override
   const getAppUrl = () => {
     const envAppUrl = import.meta.env.VITE_APP_URL
@@ -40,12 +26,38 @@ function App() {
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:5000'
     }
-    // Fallback: Tipply backend BaseUrl (from backend appsettings)
     return 'https://uhxejjh8s1.execute-api.us-east-1.amazonaws.com/dev'
   }
 
   const appUrl = getAppUrl()
   const apiUrl = getApiUrl()
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/" element={<HomePage appUrl={appUrl} apiUrl={apiUrl} />} />
+      </Routes>
+    </Router>
+  )
+}
+
+function HomePage({ appUrl, apiUrl }) {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [isSearching, setIsSearching] = useState(false)
+  const [showResults, setShowResults] = useState(false)
+  const [showWaitlistForm, setShowWaitlistForm] = useState(false)
+  const [waitlistForm, setWaitlistForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
+  })
+  const [waitlistSubmitting, setWaitlistSubmitting] = useState(false)
+  const [waitlistMessage, setWaitlistMessage] = useState('')
+  const searchTimeoutRef = useRef(null)
+  const resultsRef = useRef(null)
 
   // Search performers
   const searchPerformers = async (query) => {
@@ -79,16 +91,14 @@ function App() {
     const value = e.target.value
     setSearchQuery(value)
 
-    // Clear existing timeout
     if (searchTimeoutRef.current) {
       clearTimeout(searchTimeoutRef.current)
     }
 
-    // Set new timeout for search
     if (value.length >= 3) {
       searchTimeoutRef.current = setTimeout(() => {
         searchPerformers(value)
-      }, 300) // 300ms debounce
+      }, 300)
     } else {
       setSearchResults([])
       setShowResults(false)
@@ -119,7 +129,6 @@ function App() {
     setWaitlistMessage('')
 
     try {
-      // Send email via backend
       const response = await fetch(`${apiUrl}/api/email/send-waitlist`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -132,7 +141,7 @@ function App() {
       })
 
       if (response.ok) {
-        setWaitlistMessage('Success! We'll be in touch soon.')
+        setWaitlistMessage('Success! We\'ll be in touch soon.')
         setWaitlistForm({ firstName: '', lastName: '', email: '', phone: '' })
         setTimeout(() => setShowWaitlistForm(false), 2000)
       } else {
@@ -162,7 +171,9 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="h-12 w-auto">
-              <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
+              <a href="/">
+                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
+              </a>
             </div>
             <div className="hidden md:flex space-x-8 items-center">
               <a href="#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
@@ -476,7 +487,7 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition">About Us</a></li>
+                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
                 <li className="text-gray-400">Contact: contact@tipwave.live</li>
               </ul>
             </div>
@@ -587,3 +598,8 @@ function App() {
           </div>
         </div>
       )}
+    </div>
+  )
+}
+
+export default App
