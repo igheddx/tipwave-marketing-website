@@ -7,6 +7,15 @@ function App() {
   const [searchResults, setSearchResults] = useState([])
   const [isSearching, setIsSearching] = useState(false)
   const [showResults, setShowResults] = useState(false)
+  const [showWaitlistForm, setShowWaitlistForm] = useState(false)
+  const [waitlistForm, setWaitlistForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
+  })
+  const [waitlistSubmitting, setWaitlistSubmitting] = useState(false)
+  const [waitlistMessage, setWaitlistMessage] = useState('')
   const searchTimeoutRef = useRef(null)
   const resultsRef = useRef(null)
 
@@ -103,6 +112,49 @@ function App() {
     window.location.href = `${appUrl}/tip/${deviceId}`
   }
 
+  // Handle waitlist form submission
+  const handleWaitlistSubmit = async (e) => {
+    e.preventDefault()
+    setWaitlistSubmitting(true)
+    setWaitlistMessage('')
+
+    try {
+      // Send email via backend
+      const response = await fetch(`${apiUrl}/api/email/send-waitlist`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: waitlistForm.firstName,
+          lastName: waitlistForm.lastName,
+          email: waitlistForm.email,
+          phone: waitlistForm.phone || ''
+        })
+      })
+
+      if (response.ok) {
+        setWaitlistMessage('Success! We'll be in touch soon.')
+        setWaitlistForm({ firstName: '', lastName: '', email: '', phone: '' })
+        setTimeout(() => setShowWaitlistForm(false), 2000)
+      } else {
+        setWaitlistMessage('Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      logger.error('Waitlist submission error:', error)
+      setWaitlistMessage('Network error. Please try again.')
+    } finally {
+      setWaitlistSubmitting(false)
+    }
+  }
+
+  // Handle waitlist form input
+  const handleWaitlistInput = (e) => {
+    const { name, value } = e.target
+    setWaitlistForm(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -187,8 +239,12 @@ function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">Join the Waitlist</a>
-            <button className="btn-outline text-lg px-8 py-4">See Prototype in Action</button>
+            <button 
+              onClick={() => setShowWaitlistForm(true)}
+              className="btn-primary text-lg px-8 py-4 inline-block text-center"
+            >
+              Join the Waitlist
+            </button>
           </div>
         </div>
       </section>
@@ -259,7 +315,7 @@ function App() {
               <p className="text-lg text-gray-600 mb-8">
                 This isn't a buzz in your pocket. It's a celebration on your stage. A visible, radiant thank-you that turns appreciation into pure energy.
               </p>
-              <a href={`${appUrl}/onboarding`} className="btn-primary inline-block">Join Early Access</a>
+              <a href="https://app.tipwave.live/onboarding" className="btn-primary inline-block">Join Early Access</a>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -389,12 +445,9 @@ function App() {
             Limited prototype spots available in Austin, TX • Join the waitlist to become a founding performer
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${appUrl}/onboarding`} className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
+            <a href="https://app.tipwave.live/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
               Join the Waitlist
             </a>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-tipwave-teal transition">
-              Learn More
-            </button>
           </div>
         </div>
       </section>
@@ -444,8 +497,93 @@ function App() {
           </div>
         </div>
       </footer>
-    </div>
-  )
-}
 
-export default App
+      {/* Waitlist Form Modal */}
+      {showWaitlistForm && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl">
+            <div className="p-8">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-3xl font-bold text-deep-charcoal">Join the Waitlist</h2>
+                <button 
+                  onClick={() => setShowWaitlistForm(false)}
+                  className="text-gray-400 hover:text-gray-600 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+
+              <form onSubmit={handleWaitlistSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={waitlistForm.firstName}
+                    onChange={handleWaitlistInput}
+                    required
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-tipwave-teal focus:outline-none"
+                    placeholder="Your first name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={waitlistForm.lastName}
+                    onChange={handleWaitlistInput}
+                    required
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-tipwave-teal focus:outline-none"
+                    placeholder="Your last name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={waitlistForm.email}
+                    onChange={handleWaitlistInput}
+                    required
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-tipwave-teal focus:outline-none"
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number <span className="text-gray-400">(optional)</span></label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={waitlistForm.phone}
+                    onChange={handleWaitlistInput}
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-tipwave-teal focus:outline-none"
+                    placeholder="+1 (555) 000-0000"
+                  />
+                </div>
+
+                {waitlistMessage && (
+                  <div className={`p-4 rounded-lg text-center font-medium ${
+                    waitlistMessage.includes('Success') 
+                      ? 'bg-green-50 text-green-700' 
+                      : 'bg-red-50 text-red-700'
+                  }`}>
+                    {waitlistMessage}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={waitlistSubmitting}
+                  className="w-full bg-tipwave-teal text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition disabled:opacity-50"
+                >
+                  {waitlistSubmitting ? 'Sending...' : 'Send'}
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
