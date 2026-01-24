@@ -26,8 +26,8 @@ jobs:
       - name: Build with Vite
         run: npm run build
         env:
-          VITE_API_URL: https://uhxejjh8s1.execute-api.us-east-1.amazonaws.com/dev
-          VITE_APP_URL: https://app.tipply.live
+          VITE_API_URL: https://uhxejjh8s1.execute-api.us-east-1.amazonaws.com/prod
+          VITE_APP_URL: https://app.tipwave.live
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
