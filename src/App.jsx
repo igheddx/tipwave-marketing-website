@@ -18,7 +18,7 @@ function App() {
     if (hostname === 'localhost' || hostname === '127.0.0.1') {
       return 'http://localhost:3000'
     }
-    return 'https://app.tipply.live'
+    return 'https://app.tipwave.live'
   }
 
   // Determine backend API URL based on environment with env override
