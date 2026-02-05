@@ -166,6 +166,7 @@ export default function AboutUs() {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="/about" className="hover:text-white transition">About Us</a></li>
                 <li className="text-gray-400">Contact: contact@tipwave.live</li>
+                <li className="text-gray-400">Call: 877-684-7928</li>
               </ul>
             </div>
             
