@@ -145,7 +145,7 @@ export default function AboutUs() {
         <div className="section-container">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="h-12 w-auto mb-4">
+              <div className="h-24 w-auto mb-4">
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
