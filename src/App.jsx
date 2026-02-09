@@ -175,7 +175,7 @@ function HomePage({ appUrl, apiUrl }) {
                 <img
                   src={TipwaveLogo}
                   alt="Tipwave"
-                  className="h-full origin-left scale-[2]"
+                  className="h-full origin-left scale-[4]"
                 />
               </a>
             </div>
