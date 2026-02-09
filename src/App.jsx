@@ -170,9 +170,13 @@ function HomePage({ appUrl, apiUrl }) {
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="h-24 w-auto">
+            <div className="h-12 w-auto">
               <a href="/">
-                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
+                <img
+                  src={TipwaveLogo}
+                  alt="Tipwave"
+                  className="h-full origin-left scale-[2]"
+                />
               </a>
             </div>
             <div className="hidden md:flex space-x-8 items-center">
