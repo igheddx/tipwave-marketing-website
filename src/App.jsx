@@ -168,7 +168,7 @@ function HomePage({ appUrl, apiUrl }) {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-[11px]">
           <div className="flex justify-between items-center">
             <div className="h-12 w-auto">
               <a href="/">
