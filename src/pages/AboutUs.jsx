@@ -30,7 +30,7 @@ export default function AboutUs() {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Tipwave exists for one simple belief:  
-            <span className="block font-bold mt-4">When someone says "thank you," the performer should feel it.</span>
+            <span className="block font-bold mt-4">When someone says "thank you," the performer should feel it instantly — in the room, on stage, in real light and sound.</span>
           </p>
         </div>
       </section>
@@ -42,16 +42,16 @@ export default function AboutUs() {
             <h2 className="text-4xl font-bold text-deep-charcoal mb-8">Why Tipwave Exists</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                In today's world, digital payments have made tipping convenient — but invisible. Performers pour their heart into every moment, yet appreciation often arrives as a silent notification long after the show is over. No eye contact. No shared smile. No spark.
+                Digital tipping made payments convenient, but it made appreciation invisible. Performers give everything in real time, yet gratitude often arrives as a silent notification after the moment has passed.
               </p>
               <p>
-                We're here to bring that spark back.
+                Tipwave brings the spark back with hardware you can see and hear.
               </p>
               <p className="pt-4">
-                Live performance is one of the last places where humans gather to feel something together. But the emotional loop between performer and audience has quietly broken. Tipwave was created to repair it.
+                Live performance is built on shared emotion. When appreciation is silent, that loop breaks. Tipwave was built to restore it.
               </p>
               <p>
-                Our device lights up, reacts, and celebrates instantly when someone tips — turning a simple gesture into a shared moment of joy. It's not just a payment. It's presence. It's connection. It's the moment every performer deserves.
+                Our 11×6 LED cylinder erupts with light and sound the instant a fan tips. It turns a payment into a physical stage moment — visible, unmistakable, and emotionally clear for everyone present.
               </p>
             </div>
           </div>
@@ -66,16 +66,16 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
                 Tipwave began with a simple observation:  
-                <span className="block font-bold mt-2">Performers were giving everything, but receiving nothing they could <em>feel</em>.</span>
+                <span className="block font-bold mt-2">Performers were giving everything, but receiving appreciation in silence.</span>
               </p>
               <p>
-                Dominic, our founder, spent countless nights watching musicians, comedians, poets, and creators pour themselves out on stage — only to get a quiet buzz on their phone hours later. The gratitude was real, but the moment was gone.
+                Dominic, our founder, spent countless nights watching artists pour themselves out on stage while tips arrived quietly on a screen. The gratitude was real, but the emotional moment was missing.
               </p>
               <p>
-                He believed appreciation should be visible. Emotional. Human.
+                He believed appreciation should be physical, visible, and immediate.
               </p>
               <p>
-                So he built a device that brings the audience's "thank you" back into the room — where it belongs.
+                So he built Tipwave: hardware plus software that converts QR-to-Stripe payments into instant light-and-sound eruptions on stage.
               </p>
             </div>
           </div>
@@ -89,11 +89,11 @@ export default function AboutUs() {
             <h2 className="text-4xl font-bold text-deep-charcoal mb-8">Our Vision</h2>
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
-                We imagine a world where every performer — from street artists to touring musicians — can feel the love their audience gives them. A world where generosity is joyful, not silent. A world where technology amplifies connection instead of replacing it.
+                We imagine a world where every performer — from buskers to touring artists — gets immediate emotional clarity from their audience. A world where generosity is felt, not guessed.
               </p>
               <p className="pt-4">
                 <span className="block font-bold mb-2">Tipwave is more than a tool.</span>
-                It's a celebration of the human moment.
+                It's a physical celebration of the human moment.
               </p>
             </div>
           </div>
@@ -108,19 +108,19 @@ export default function AboutUs() {
             <ul className="space-y-6 text-lg text-gray-600">
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
-                <span><strong className="text-deep-charcoal">Human-first design</strong> — every feature must deepen connection</span>
+                <span><strong className="text-deep-charcoal">Human-first design</strong> — every feature must strengthen real-time performer-audience connection</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
-                <span><strong className="text-deep-charcoal">Respect for performers</strong> — their craft, time, and emotional labor matter</span>
+                <span><strong className="text-deep-charcoal">Respect for performers</strong> — their craft, confidence, and emotional labor matter</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
-                <span><strong className="text-deep-charcoal">Simplicity</strong> — tipping should be effortless and delightful</span>
+                <span><strong className="text-deep-charcoal">Simplicity</strong> — QR code → Stripe → instant physical feedback</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
-                <span><strong className="text-deep-charcoal">Presence</strong> — technology should enhance the moment, not distract from it</span>
+                <span><strong className="text-deep-charcoal">Presence</strong> — technology should amplify the stage moment, not hide it</span>
               </li>
             </ul>
           </div>
@@ -132,7 +132,7 @@ export default function AboutUs() {
         <div className="section-container text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Join Our Mission?</h2>
           <p className="text-2xl mb-12 opacity-90">
-            Be among the first performers to experience Tipwave
+            Be among the first performers to experience Tipwave’s live eruption moment
           </p>
           <a href="/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
             Join the Waitlist
@@ -149,7 +149,7 @@ export default function AboutUs() {
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
-                Tipwave turns digital appreciation into physical magic. Currently in limited prototype with select Austin performers. Join the waitlist to help shape the future of live performance.
+                Tipwave is a hardware-plus-software tipping experience built around an 11×6 LED cylinder that erupts the instant a fan tips. Built for connection, confidence, and stage magic.
               </p>
             </div>
             
