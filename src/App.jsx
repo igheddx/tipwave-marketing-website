@@ -168,15 +168,11 @@ function HomePage({ appUrl, apiUrl }) {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-[11px]">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="h-12 w-auto">
               <a href="/">
-                <img
-                  src={TipwaveLogo}
-                  alt="Tipwave"
-                  className="h-full origin-left scale-[4]"
-                />
+                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </a>
             </div>
             <div className="hidden md:flex space-x-8 items-center">
@@ -472,7 +468,7 @@ function HomePage({ appUrl, apiUrl }) {
         <div className="section-container">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="h-24 w-auto mb-4">
+              <div className="h-12 w-auto mb-4">
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
