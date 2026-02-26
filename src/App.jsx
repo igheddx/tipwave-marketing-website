@@ -168,9 +168,9 @@ function HomePage({ appUrl, apiUrl }) {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex justify-between items-center">
-            <div className="h-12 w-auto">
+            <div className="h-20 w-auto">
               <a href="/">
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </a>
@@ -179,7 +179,7 @@ function HomePage({ appUrl, apiUrl }) {
               <a href="#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href={`${appUrl}/login`} className="btn-secondary">Artist Sign In</a>
+              <a href={`${appUrl}/login`} className="btn-secondary">Performer Dashboard</a>
             </div>
           </div>
         </div>
@@ -192,13 +192,13 @@ function HomePage({ appUrl, apiUrl }) {
             Now Recruiting Austin Performers — Limited Prototype Program
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">
-            Every Tip Becomes a Spark. Every Moment, Unforgettable.
+            Turn More Moments Into More Tips.
           </h1>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Tipwave centers the moment around an 11×6 LED cylinder that erupts with light and sound the instant a fan tips. The room sees it. The performer feels it. Appreciation stops being silent and becomes a physical celebration everyone shares.
+          <p className="text-2xl text-gray-700 mb-6 max-w-3xl mx-auto font-semibold">
+            Every Tip Becomes a Spark.
           </p>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto italic">
-            This is live performance with emotional clarity: no wondering, no delayed buzzes, no quiet uncertainty. Just a visible spark between artist and audience in real time.
+          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            Performers using Tipwave report increased tip volume and stronger audience engagement because appreciation becomes visible and contagious.
           </p>
           <p className="text-base text-gray-500 mb-12 max-w-2xl mx-auto">
             <strong>Now in Limited Prototype:</strong> Tipwave is actively recruiting performers in Austin, TX for hands-on prototype testing. We are selecting a small group to help shape the final product.
@@ -256,12 +256,9 @@ function HomePage({ appUrl, apiUrl }) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => setShowWaitlistForm(true)}
-              className="btn-primary text-lg px-8 py-4 inline-block text-center"
-            >
+            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">
               Apply for Prototype Access
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -365,7 +362,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Song Requests on Demand</h3>
               <p className="text-gray-600">
-                Fans scan the QR code, tip through Stripe, and submit requests in one smooth flow. You get clear, immediate context on what the crowd wants while the device confirms the moment physically.
+                Fans use a simple flow: QR Code → Tip → Light & Sound Eruption. Requests arrive with immediate physical feedback, so you can read the room and respond in real time.
               </p>
             </div>
 
@@ -376,10 +373,11 @@ function HomePage({ appUrl, apiUrl }) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4">Secure Stripe Payments</h3>
+              <h3 className="text-2xl font-bold mb-4">Secure Payment Processing</h3>
               <p className="text-gray-600">
-                Tipwave runs on Stripe for trusted, secure payments. The flow is simple: QR code → Stripe → instant eruption. You get confidence in your payouts and clarity in every interaction.
+                Tipwave securely processes payments using Stripe infrastructure. The experience is simple: QR code → tip → instant light and sound eruption.
               </p>
+              <p className="text-gray-600 mt-4">Payments securely processed via Stripe.</p>
             </div>
           </div>
         </div>
@@ -400,7 +398,7 @@ function HomePage({ appUrl, apiUrl }) {
               <p className="text-lg text-gray-600 mb-8">
                 This is not a silent app notification. It is a physical celebration on stage that restores connection, builds confidence, and keeps momentum alive.
               </p>
-              <a href="https://app.tipwave.live/onboarding" className="btn-primary inline-block">Join Early Access</a>
+              <a href="https://app.tipwave.live/onboarding" className="btn-primary inline-block">Apply for Prototype Access</a>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -442,7 +440,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Instant Feedback Loop</h3>
               <p className="text-gray-600">
-                Every tip creates an immediate stage moment: fan action, Stripe confirmation, then light-and-sound eruption. That loop drives energy up and keeps artist and audience emotionally in sync.
+                Every tip creates an immediate stage moment: QR Code → Tip → Light & Sound Eruption. That loop drives energy up and keeps artist and audience emotionally in sync.
               </p>
             </div>
 
@@ -556,7 +554,7 @@ function HomePage({ appUrl, apiUrl }) {
             <div>
               <h4 className="font-bold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href={`${appUrl}/onboarding`} className="hover:text-white transition">Sign Up</a></li>
+                <li><a href={`${appUrl}/onboarding`} className="hover:text-white transition">Apply for Prototype Access</a></li>
                 <li><a href={`${appUrl}/login`} className="hover:text-white transition">Login</a></li>
               </ul>
             </div>
