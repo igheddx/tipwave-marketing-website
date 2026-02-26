@@ -5,14 +5,14 @@ export default function AboutUs() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-7">
-          <div className="flex justify-between items-center">
-            <div className="h-28 w-auto">
+        <div className="max-w-7xl mx-auto px-6 h-20">
+          <div className="flex h-full justify-between items-center">
+            <div className="h-full w-auto flex items-center">
               <a href="/">
-                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
+                <img src={TipwaveLogo} alt="Tipwave" className="h-full w-auto object-contain max-h-12 sm:max-h-14" />
               </a>
             </div>
-            <div className="hidden md:flex space-x-8 items-center">
+            <div className="hidden md:flex h-full space-x-8 items-center">
               <a href="/#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="/#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="/#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
