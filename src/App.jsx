@@ -168,9 +168,9 @@ function HomePage({ appUrl, apiUrl }) {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="max-w-7xl mx-auto px-6 py-7">
           <div className="flex justify-between items-center">
-            <div className="h-20 w-auto">
+            <div className="h-28 w-auto">
               <a href="/">
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </a>
@@ -179,7 +179,7 @@ function HomePage({ appUrl, apiUrl }) {
               <a href="#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href={`${appUrl}/login`} className="btn-secondary">Performer Dashboard</a>
+              <a href={`${appUrl}/login`} className="btn-secondary text-sm opacity-90">Artist Sign-In</a>
             </div>
           </div>
         </div>
@@ -189,22 +189,22 @@ function HomePage({ appUrl, apiUrl }) {
       <section className="bg-gradient-to-br from-white to-soft-gray pt-20 pb-32">
         <div className="section-container text-center">
           <div className="inline-block bg-tipwave-teal text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
-            Now Recruiting Austin Performers — Limited Prototype Program
+            Now Recruiting Austin Performers — Limited Prototype Program with Direct Tip Growth Potential
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">
-            Turn More Moments Into More Tips.
+            Increase Tip Volume with Visible Appreciation.
           </h1>
           <p className="text-2xl text-gray-700 mb-6 max-w-3xl mx-auto font-semibold">
-            Every Tip Becomes a Spark.
+            More eruptions. More audience momentum. More earnings on stage.
           </p>
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-            Performers using Tipwave report increased tip volume and stronger audience engagement because appreciation becomes visible and contagious.
+            Tipwave turns appreciation into a visible, contagious moment that pulls the room in and drives more people to tip.
           </p>
           <p className="text-base text-gray-500 mb-12 max-w-2xl mx-auto">
-            <strong>Now in Limited Prototype:</strong> Tipwave is actively recruiting performers in Austin, TX for hands-on prototype testing. We are selecting a small group to help shape the final product.
+            <strong>Now in Limited Prototype:</strong> We are selecting a small group of Austin performers to test Tipwave in real venues, increase live earning moments, and shape the final product.
           </p>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Help shape the future of live tipping.
+            If you want stronger crowd response and higher tip momentum, this program is built for you.
           </p>
           
           {/* Search Box */}
@@ -362,7 +362,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Song Requests on Demand</h3>
               <p className="text-gray-600">
-                Fans use a simple flow: QR Code → Tip → Light & Sound Eruption. Requests arrive with immediate physical feedback, so you can read the room and respond in real time.
+                Fans scan the QR code, choose a payment method, tip inside the Tipwave app, and the device erupts instantly with light and sound. Requests arrive in real time so you can adapt your set with confidence.
               </p>
             </div>
 
@@ -375,9 +375,9 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Secure Payment Processing</h3>
               <p className="text-gray-600">
-                Tipwave securely processes payments using Stripe infrastructure. The experience is simple: QR code → tip → instant light and sound eruption.
+                Tipwave processes payments securely using Stripe infrastructure, but tipping happens inside the Tipwave tipping app. The performer-facing flow is simple: QR Code → Payment Method → Tip → Light & Sound Eruption.
               </p>
-              <p className="text-gray-600 mt-4">Payments securely processed via Stripe.</p>
+              <p className="text-gray-600 mt-4">Secure rails in the background. Instant celebration on stage.</p>
             </div>
           </div>
         </div>
@@ -440,7 +440,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Instant Feedback Loop</h3>
               <p className="text-gray-600">
-                Every tip creates an immediate stage moment: QR Code → Tip → Light & Sound Eruption. That loop drives energy up and keeps artist and audience emotionally in sync.
+                Every tip creates an immediate stage moment: QR Code → Payment Method → Tip → Light & Sound Eruption. That loop boosts audience connection, performer confidence, and repeat tipping behavior.
               </p>
             </div>
 

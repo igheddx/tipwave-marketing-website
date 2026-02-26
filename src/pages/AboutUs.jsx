@@ -5,9 +5,9 @@ export default function AboutUs() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="max-w-7xl mx-auto px-6 py-7">
           <div className="flex justify-between items-center">
-            <div className="h-20 w-auto">
+            <div className="h-28 w-auto">
               <a href="/">
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </a>
@@ -16,7 +16,7 @@ export default function AboutUs() {
               <a href="/#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="/#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
               <a href="/#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href="/login" className="btn-secondary">Performer Dashboard</a>
+              <a href="/login" className="btn-secondary text-sm opacity-90">Artist Sign-In</a>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function AboutUs() {
                 He believed appreciation should be physical, visible, and immediate.
               </p>
               <p>
-                So he built Tipwave: hardware plus software that turns QR Code → Tip → Light & Sound Eruption into a single unforgettable stage moment.
+                So he built Tipwave: hardware plus software that turns QR Code → Payment Method → Tip → Light & Sound Eruption into a single unforgettable stage moment.
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function AboutUs() {
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
-                <span><strong className="text-deep-charcoal">Simplicity</strong> — QR Code → Tip → Light & Sound Eruption</span>
+                <span><strong className="text-deep-charcoal">Simplicity</strong> — QR Code → Payment Method → Tip → Light & Sound Eruption</span>
               </li>
               <li className="flex items-start gap-4">
                 <span className="text-tipwave-teal font-bold text-2xl mt-1">•</span>
@@ -134,7 +134,7 @@ export default function AboutUs() {
           <p className="text-2xl mb-12 opacity-90">
             Be among the first performers to experience Tipwave’s live eruption moment
           </p>
-          <a href="/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
+          <a href="https://app.tipwave.live/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
             Apply for Prototype Access
           </a>
         </div>
