@@ -134,7 +134,7 @@ export default function AboutUs() {
           <p className="text-2xl mb-12 opacity-90">
             Be among the first performers to experience Tipwave’s live eruption moment
           </p>
-          <a href="https://app.tipwave.live/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
+          <a href="/#apply-prototype-access" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
             Apply for Prototype Access
           </a>
         </div>
@@ -159,7 +159,7 @@ export default function AboutUs() {
             <div>
               <h4 className="font-bold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="https://app.tipwave.live/onboarding" className="hover:text-white transition">Apply for Prototype Access</a></li>
+                <li><a href="/#apply-prototype-access" className="hover:text-white transition">Apply for Prototype Access</a></li>
                 <li><a href="/login" className="hover:text-white transition">Login</a></li>
               </ul>
             </div>

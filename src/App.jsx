@@ -164,6 +164,23 @@ function HomePage({ appUrl, apiUrl }) {
     }))
   }
 
+  const openPrototypeForm = () => {
+    setShowWaitlistForm(true)
+  }
+
+  useEffect(() => {
+    const openFromHash = () => {
+      if (window.location.hash === '#apply-prototype-access') {
+        setShowWaitlistForm(true)
+      }
+    }
+
+    openFromHash()
+    window.addEventListener('hashchange', openFromHash)
+
+    return () => window.removeEventListener('hashchange', openFromHash)
+  }, [])
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -256,9 +273,9 @@ function HomePage({ appUrl, apiUrl }) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${appUrl}/onboarding`} className="btn-primary text-lg px-8 py-4 inline-block text-center">
+            <button type="button" onClick={openPrototypeForm} className="btn-primary text-lg px-8 py-4 inline-block text-center">
               Apply for Prototype Access
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -398,7 +415,7 @@ function HomePage({ appUrl, apiUrl }) {
               <p className="text-lg text-gray-600 mb-8">
                 This is not a silent app notification. It is a physical celebration on stage that restores connection, builds confidence, and keeps momentum alive.
               </p>
-              <a href="https://app.tipwave.live/onboarding" className="btn-primary inline-block">Apply for Prototype Access</a>
+              <button type="button" onClick={openPrototypeForm} className="btn-primary inline-block">Apply for Prototype Access</button>
             </div>
             <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
               <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -528,9 +545,9 @@ function HomePage({ appUrl, apiUrl }) {
             Limited prototype spots available in Austin, TX • Apply to become a Founding Performer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://app.tipwave.live/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
+            <button type="button" onClick={openPrototypeForm} className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
               Apply for Prototype Access
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -554,7 +571,7 @@ function HomePage({ appUrl, apiUrl }) {
             <div>
               <h4 className="font-bold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href={`${appUrl}/onboarding`} className="hover:text-white transition">Apply for Prototype Access</a></li>
+                <li><button type="button" onClick={openPrototypeForm} className="hover:text-white transition">Apply for Prototype Access</button></li>
                 <li><a href={`${appUrl}/login`} className="hover:text-white transition">Login</a></li>
               </ul>
             </div>
