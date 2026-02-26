@@ -135,7 +135,7 @@ export default function AboutUs() {
             Be among the first performers to experience Tipwave’s live eruption moment
           </p>
           <a href="/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block">
-            Join the Waitlist
+            Apply for Prototype Access
           </a>
         </div>
       </section>
@@ -150,6 +150,9 @@ export default function AboutUs() {
               </div>
               <p className="text-gray-400">
                 Tipwave is a hardware-plus-software tipping experience built around an 11×6 LED cylinder that erupts the instant a fan tips. Built for connection, confidence, and stage magic.
+              </p>
+              <p className="text-gray-300 mt-4 font-medium">
+                Limited prototype spots available in Austin. Apply to become a Founding Performer.
               </p>
             </div>
             

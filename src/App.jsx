@@ -188,6 +188,9 @@ function HomePage({ appUrl, apiUrl }) {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-white to-soft-gray pt-20 pb-32">
         <div className="section-container text-center">
+          <div className="inline-block bg-tipwave-teal text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
+            Now Recruiting Austin Performers — Limited Prototype Program
+          </div>
           <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">
             Every Tip Becomes a Spark. Every Moment, Unforgettable.
           </h1>
@@ -198,7 +201,10 @@ function HomePage({ appUrl, apiUrl }) {
             This is live performance with emotional clarity: no wondering, no delayed buzzes, no quiet uncertainty. Just a visible spark between artist and audience in real time.
           </p>
           <p className="text-base text-gray-500 mb-12 max-w-2xl mx-auto">
-            <strong>Now in Limited Prototype:</strong> Tipwave is currently being tested with select performers in Austin, TX. Join the waitlist to become a founding performer and help shape the future of live performance.
+            <strong>Now in Limited Prototype:</strong> Tipwave is actively recruiting performers in Austin, TX for hands-on prototype testing. We are selecting a small group to help shape the final product.
+          </p>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Help shape the future of live tipping.
           </p>
           
           {/* Search Box */}
@@ -254,8 +260,76 @@ function HomePage({ appUrl, apiUrl }) {
               onClick={() => setShowWaitlistForm(true)}
               className="btn-primary text-lg px-8 py-4 inline-block text-center"
             >
-              Join the Waitlist
+              Apply for Prototype Access
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Prototype Program Overview */}
+      <section className="bg-white">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">Prototype Program Overview</h2>
+          <p className="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+            Tipwave is currently in limited prototype testing in Austin, TX. We are selecting a small group of performers to test the device in real venues, and their feedback will directly shape the final Tipwave product and experience.
+          </p>
+        </div>
+      </section>
+
+      {/* Benefits for Prototype Performers */}
+      <section className="bg-soft-gray">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">Benefits for Prototype Performers</h2>
+          <div className="max-w-3xl mx-auto card">
+            <ul className="space-y-4 text-lg text-gray-600">
+              <li>• Free access to the Tipwave device during the test period</li>
+              <li>• Direct contact with the founder for support and feedback</li>
+              <li>• Early access to new features</li>
+              <li>• Exclusive “Founding Performer” status at launch</li>
+              <li>• Opportunity to influence the final design and experience</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We’re Looking For */}
+      <section className="bg-white">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">Who We’re Looking For</h2>
+          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            We’re currently inviting performers in Austin, TX across live entertainment, including:
+          </p>
+          <div className="max-w-3xl mx-auto card">
+            <ul className="space-y-3 text-lg text-gray-600">
+              <li>• Solo artists and singer-songwriters</li>
+              <li>• Bands and live ensembles</li>
+              <li>• Street buskers</li>
+              <li>• DJs</li>
+              <li>• Comedians</li>
+              <li>• Drag performers</li>
+              <li>• And other live performers who want stronger audience connection</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Join */}
+      <section className="bg-soft-gray">
+        <div className="section-container">
+          <h2 className="text-4xl font-bold text-center mb-4">How to Join</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card text-center">
+              <h3 className="text-2xl font-bold mb-4">1</h3>
+              <p className="text-gray-600">Fill out the short form</p>
+            </div>
+            <div className="card text-center">
+              <h3 className="text-2xl font-bold mb-4">2</h3>
+              <p className="text-gray-600">We’ll reach out within 48 hours</p>
+            </div>
+            <div className="card text-center">
+              <h3 className="text-2xl font-bold mb-4">3</h3>
+              <p className="text-gray-600">If selected, you’ll receive your prototype device and onboarding</p>
+            </div>
           </div>
         </div>
       </section>
@@ -453,11 +527,11 @@ function HomePage({ appUrl, apiUrl }) {
             Be among the first performers to experience Tipwave’s live eruption moment
           </p>
           <p className="text-lg mb-12 opacity-80">
-            Limited prototype spots available in Austin, TX • Join the waitlist to become a founding performer
+            Limited prototype spots available in Austin, TX • Apply to become a Founding Performer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://app.tipwave.live/onboarding" className="bg-white text-tipwave-teal px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg inline-block text-center">
-              Join the Waitlist
+              Apply for Prototype Access
             </a>
           </div>
         </div>
@@ -473,6 +547,9 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <p className="text-gray-400">
                 Tipwave combines hardware and software to turn tips into instant physical celebration. Built around an 11×6 LED cylinder, it helps performers feel seen and audiences feel connected.
+              </p>
+              <p className="text-gray-300 mt-4 font-medium">
+                Limited prototype spots available in Austin. Apply to become a Founding Performer.
               </p>
             </div>
             
@@ -516,7 +593,7 @@ function HomePage({ appUrl, apiUrl }) {
           <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl">
             <div className="p-8">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-3xl font-bold text-deep-charcoal">Join the Waitlist</h2>
+                <h2 className="text-3xl font-bold text-deep-charcoal">Apply for Prototype Access</h2>
                 <button 
                   onClick={() => setShowWaitlistForm(false)}
                   className="text-gray-400 hover:text-gray-600 text-2xl"
