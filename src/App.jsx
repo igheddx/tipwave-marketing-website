@@ -224,53 +224,57 @@ function HomePage({ appUrl, apiUrl }) {
             If you want stronger crowd response and higher tip momentum, this program is built for you.
           </p>
           
-          {/* Search Box */}
-          <div className="max-w-2xl mx-auto mb-8 relative" ref={resultsRef}>
-            <div className="relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                placeholder="Find performers using Tipwave…"
-                className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-tipwave-teal focus:outline-none shadow-lg"
-                onFocus={() => searchQuery.length >= 3 && searchResults.length > 0 && setShowResults(true)}
-              />
-              {isSearching ? (
-                <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
-                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-tipwave-teal"></div>
+          {false && (
+            <>
+              {/* Search Box */}
+              <div className="max-w-2xl mx-auto mb-8 relative" ref={resultsRef}>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    placeholder="Find performers using Tipwave…"
+                    className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-tipwave-teal focus:outline-none shadow-lg"
+                    onFocus={() => searchQuery.length >= 3 && searchResults.length > 0 && setShowResults(true)}
+                  />
+                  {isSearching ? (
+                    <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-tipwave-teal"></div>
+                    </div>
+                  ) : (
+                    <svg className="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  )}
                 </div>
-              ) : (
-                <svg className="absolute right-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              )}
-            </div>
 
-            {/* Search Results Dropdown */}
-            {showResults && searchResults.length > 0 && (
-              <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 max-h-96 overflow-y-auto z-50">
-                {searchResults.map((performer, index) => (
-                  <div
-                    key={index}
-                    onClick={() => navigateToPerformer(performer.deviceId)}
-                    className="px-6 py-4 hover:bg-soft-gray cursor-pointer transition border-b border-gray-100 last:border-b-0"
-                  >
-                    <div className="font-bold text-deep-charcoal text-lg">{performer.stageName}</div>
-                    {performer.bio && (
-                      <div className="text-gray-600 text-sm mt-1 line-clamp-2">{performer.bio}</div>
-                    )}
+                {/* Search Results Dropdown */}
+                {showResults && searchResults.length > 0 && (
+                  <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 max-h-96 overflow-y-auto z-50">
+                    {searchResults.map((performer, index) => (
+                      <div
+                        key={index}
+                        onClick={() => navigateToPerformer(performer.deviceId)}
+                        className="px-6 py-4 hover:bg-soft-gray cursor-pointer transition border-b border-gray-100 last:border-b-0"
+                      >
+                        <div className="font-bold text-deep-charcoal text-lg">{performer.stageName}</div>
+                        {performer.bio && (
+                          <div className="text-gray-600 text-sm mt-1 line-clamp-2">{performer.bio}</div>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            )}
+                )}
 
-            {/* No Results Message */}
-            {showResults && searchQuery.length >= 3 && searchResults.length === 0 && !isSearching && (
-              <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 p-6 z-50">
-                <p className="text-gray-600 text-center">No artists found matching "{searchQuery}"</p>
+                {/* No Results Message */}
+                {showResults && searchQuery.length >= 3 && searchResults.length === 0 && !isSearching && (
+                  <div className="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border-2 border-gray-100 p-6 z-50">
+                    <p className="text-gray-600 text-center">No artists found matching "{searchQuery}"</p>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
+            </>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button type="button" onClick={openPrototypeForm} className="btn-primary text-lg px-8 py-4 inline-block text-center">
