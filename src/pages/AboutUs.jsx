@@ -1,4 +1,4 @@
-import TipwaveLogo from '../assets/tipwave-logo2.png'
+import TipwaveLogo from '../assets/tipwave-logo3.png'
 
 export default function AboutUs() {
   return (
@@ -8,8 +8,8 @@ export default function AboutUs() {
         <div className="max-w-7xl mx-auto px-6 h-[72px]">
           <div className="flex h-full justify-between items-center">
             <div className="h-full w-auto flex items-center">
-              <a href="/">
-                <img src={TipwaveLogo} alt="Tipwave" className="h-full w-auto object-contain max-h-10 sm:max-h-16" />
+              <a href="/" className="h-full flex items-center">
+                <img src={TipwaveLogo} alt="Tipwave" className="h-10 sm:h-16 md:h-[64px] w-auto object-contain" />
               </a>
             </div>
             <div className="hidden md:flex h-full space-x-8 items-center">
