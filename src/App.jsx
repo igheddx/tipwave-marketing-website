@@ -420,12 +420,13 @@ function HomePage({ appUrl, apiUrl }) {
               </p>
               <button type="button" onClick={openPrototypeForm} className="btn-primary inline-block">Apply for Prototype Access</button>
             </div>
-            <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 shadow-2xl p-1">
-              <div className="w-full h-full rounded-xl overflow-hidden bg-black">
+            <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 sm:h-[32rem] md:h-[36rem] shadow-2xl p-1 flex items-center justify-center">
+              <div className="h-full aspect-[9/16] rounded-xl overflow-hidden bg-black">
                 <video
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   src="https://d7skwhqoj49or.cloudfront.net/videos/tipwave-demo.mp4"
                   controls
+                  loop
                   playsInline
                   preload="metadata"
                 >
