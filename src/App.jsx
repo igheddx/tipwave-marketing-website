@@ -420,10 +420,18 @@ function HomePage({ appUrl, apiUrl }) {
               </p>
               <button type="button" onClick={openPrototypeForm} className="btn-primary inline-block">Apply for Prototype Access</button>
             </div>
-            <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 flex items-center justify-center shadow-2xl">
-              <svg className="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
+            <div className="bg-gradient-to-br from-tipwave-teal to-tipwave-magenta rounded-2xl h-96 shadow-2xl p-1">
+              <div className="w-full h-full rounded-xl overflow-hidden bg-black">
+                <video
+                  className="w-full h-full object-cover"
+                  src="https://d7skwhqoj49or.cloudfront.net/videos/tipwave-demo.mp4"
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>
