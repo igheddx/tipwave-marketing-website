@@ -469,7 +469,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Instant Feedback Loop</h3>
               <p className="text-gray-600">
-                Every tip creates an immediate stage moment: QR Code → Payment Method → Tip → Light & Sound Eruption. That loop boosts audience connection, performer confidence, and repeat tipping behavior.
+                Every tip creates an immediate stage moment: QR Code → Tip → Light & Sound Eruption. That loop boosts audience connection, performer confidence, and repeat tipping behavior.
               </p>
             </div>
 
@@ -573,7 +573,7 @@ function HomePage({ appUrl, apiUrl }) {
                 <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
               </div>
               <p className="text-gray-400">
-                Tipwave combines hardware and software to turn tips into instant physical celebration. Built around an 11×6 LED cylinder, it helps performers feel seen and audiences feel connected.
+                Tipwave makes appreciation impossible to miss—driving more tipping moments and creating a shared connection between performers and audiences.
               </p>
               <p className="text-gray-300 mt-4 font-medium">
                 Limited prototype spots available in Austin. Apply to become a Founding Performer.
