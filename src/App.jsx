@@ -324,7 +324,6 @@ function HomePage({ appUrl, apiUrl }) {
               <li>• Street buskers</li>
               <li>• DJs</li>
               <li>• Comedians</li>
-              <li>• Drag performers</li>
               <li>• And other live performers who want stronger audience connection</li>
             </ul>
           </div>
@@ -396,7 +395,7 @@ function HomePage({ appUrl, apiUrl }) {
               </div>
               <h3 className="text-2xl font-bold mb-4">Secure Payment Processing</h3>
               <p className="text-gray-600">
-                Tipwave processes payments securely using Stripe infrastructure, but tipping happens inside the Tipwave tipping app. The performer-facing flow is simple: QR Code → Payment Method → Tip → Light & Sound Eruption.
+                Tipwave processes payments securely using Stripe infrastructure, but tipping happens inside the Tipwave tipping app. The performer-facing flow is simple: QR Code → Tip → Light & Sound Eruption.
               </p>
               <p className="text-gray-600 mt-4">Secure rails in the background. Instant celebration on stage.</p>
             </div>
