@@ -1,6 +1,9 @@
+import { useState } from 'react'
 import TipwaveLogo from '../assets/tipwave-logo3.png'
 
 export default function AboutUs() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -12,6 +15,23 @@ export default function AboutUs() {
                 <img src={TipwaveLogo} alt="Tipwave" className="h-10 sm:h-16 md:h-[64px] w-auto object-contain" />
               </a>
             </div>
+            <button
+              type="button"
+              className="md:hidden text-deep-charcoal"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
             <div className="hidden md:flex h-full space-x-8 items-center">
               <a href="/#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
               <a href="/#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
@@ -20,6 +40,16 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+        {isMobileMenuOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4">
+            <div className="flex flex-col gap-4">
+              <a href="/#features" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
+              <a href="/#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
+              <a href="/#reviews" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
+              <a href="/login" onClick={() => setIsMobileMenuOpen(false)} className="btn-secondary text-sm opacity-90 inline-block w-fit">Artist Sign-In</a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
