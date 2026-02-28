@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TipwaveLogo from './assets/tipwave-logo3.png'
 import logger from './utils/logger'
 import AboutUs from './pages/AboutUs'
+import PerformerHelp from './pages/PerformerHelp'
 
 function App() {
   // Determine app URL based on environment with env override
@@ -36,6 +37,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/performer-help" element={<PerformerHelp appUrl={appUrl} />} />
         <Route path="/" element={<HomePage appUrl={appUrl} apiUrl={apiUrl} />} />
       </Routes>
     </Router>
