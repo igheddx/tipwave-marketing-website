@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react'
 import SiteNav from '../components/SiteNav'
 import SiteFooter from '../components/SiteFooter'
 
-const VIDEO_URL = 'https://d123456abcdef.cloudfront.net/tipwave-onboarding-demo.mp4'
+// Paste the CloudFront link here once the onboarding walkthrough is uploaded
+// (upload to s3://tipwave-performer-media/videos/, link looks like https://d7skwhqoj49or.cloudfront.net/videos/<file>.mp4).
+// While this is empty the page shows a "coming soon" note instead of a broken player.
+const VIDEO_URL = ''
 
 export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
   const [copyState, setCopyState] = useState('idle')
@@ -56,34 +59,45 @@ export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
             <h2 className="text-3xl font-bold text-deep-charcoal mb-4">Getting Started: Quick Onboarding Walkthrough</h2>
             <p className="text-lg text-gray-600 mb-8">A fast, friendly walkthrough to help you get set up and ready for your first show.</p>
 
-            <video
-              className="w-full max-w-full rounded-xl shadow-lg bg-black"
-              controls
-              preload="metadata"
-              poster="/images/onboarding-poster.jpg"
-              src={VIDEO_URL}
-            >
-              Your browser does not support the video tag.
-            </video>
+            {VIDEO_URL ? (
+              <>
+              <video
+                className="w-full max-w-full rounded-xl shadow-lg bg-black"
+                controls
+                preload="metadata"
+                src={VIDEO_URL}
+              >
+                Your browser does not support the video tag.
+              </video>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <a
-                href={VIDEO_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="btn-primary inline-block"
-              >
-                Open Full Screen
-              </a>
-              <button
-                type="button"
-                onClick={handleCopyVideoLink}
-                className="inline-flex items-center px-5 py-3 rounded-full border-2 border-accent-500 text-accent-600 font-semibold hover:bg-accent-500 hover:text-white transition-all duration-200"
-              >
-                {copyState === 'copied' ? 'Link Copied' : copyState === 'error' ? 'Copy Failed' : 'Copy Video Link'}
-              </button>
-            </div>
-            <p className="text-sm text-gray-500 mt-4">Share this link with your bandmates if they’re joining Tipwave too.</p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                <a
+                  href={VIDEO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-primary inline-block"
+                >
+                  Open Full Screen
+                </a>
+                <button
+                  type="button"
+                  onClick={handleCopyVideoLink}
+                  className="inline-flex items-center px-5 py-3 rounded-full border-2 border-accent-500 text-accent-600 font-semibold hover:bg-accent-500 hover:text-white transition-all duration-200"
+                >
+                  {copyState === 'copied' ? 'Link Copied' : copyState === 'error' ? 'Copy Failed' : 'Copy Video Link'}
+                </button>
+              </div>
+              <p className="text-sm text-gray-500 mt-4">Share this link with your bandmates if they’re joining Tipwave too.</p>
+              </>
+            ) : (
+              <div className="rounded-xl bg-surface p-8 text-center">
+                <p className="text-lg font-semibold text-ink-900">The walkthrough video is coming soon.</p>
+                <p className="mt-2 text-ink-500">
+                  In the meantime, email <a className="font-semibold text-brand-700" href="mailto:contact@tipwave.live">contact@tipwave.live</a> or call{' '}
+                  <a className="font-semibold text-brand-700" href="tel:+18776847928">877-684-7928</a> and we will walk you through setup.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>
