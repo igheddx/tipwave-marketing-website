@@ -3,29 +3,42 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
   body {
-    @apply font-sans text-deep-charcoal bg-soft-gray;
+    @apply bg-surface font-sans text-ink-900 antialiased;
   }
 }
 
 @layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
   .btn-primary {
-    @apply px-6 py-3 bg-tipwave-teal text-white rounded-lg font-semibold hover:bg-teal-600 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply btn bg-brand-700 text-white hover:bg-brand-800;
   }
-  
   .btn-secondary {
-    @apply px-6 py-3 bg-tipwave-magenta text-white rounded-lg font-semibold hover:bg-pink-600 transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply btn border border-slate-300 bg-white text-ink-700 hover:bg-slate-50;
   }
-  
   .btn-outline {
-    @apply px-6 py-3 border-2 border-tipwave-teal text-tipwave-teal rounded-lg font-semibold hover:bg-tipwave-teal hover:text-white transition-all duration-200;
+    @apply btn border-2 border-brand-700 text-brand-700 hover:bg-brand-700 hover:text-white;
   }
-  
+  /* Buttons that sit on the dark hero and CTA bands */
+  .btn-light {
+    @apply btn bg-white text-ink-900 hover:bg-brand-50;
+  }
+  .btn-ghost-light {
+    @apply btn border border-white/30 text-white hover:bg-white/10;
+  }
   .section-container {
-    @apply max-w-7xl mx-auto px-6 py-20;
+    @apply mx-auto max-w-6xl px-6 py-16 md:py-24;
   }
-  
   .card {
-    @apply bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300;
+    @apply rounded-2xl border border-slate-100 bg-white p-8 shadow-card transition-shadow duration-300 hover:shadow-lift;
+  }
+  .eyebrow {
+    @apply mb-3 text-sm font-bold uppercase tracking-wider text-brand-700;
   }
 }

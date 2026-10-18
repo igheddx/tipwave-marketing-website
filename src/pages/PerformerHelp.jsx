@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import TipwaveLogo from '../assets/tipwave-logo3.png'
+import SiteNav from '../components/SiteNav'
+import SiteFooter from '../components/SiteFooter'
 
 const VIDEO_URL = 'https://d123456abcdef.cloudfront.net/tipwave-onboarding-demo.mp4'
 
 export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [copyState, setCopyState] = useState('idle')
 
   useEffect(() => {
@@ -36,55 +36,17 @@ export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
 
   return (
     <div className="min-h-screen">
-      <nav className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 h-[72px]">
-          <div className="flex h-full justify-between items-center">
-            <div className="h-full w-auto flex items-center">
-              <a href="/" className="h-full flex items-center">
-                <img src={TipwaveLogo} alt="Tipwave" className="h-10 sm:h-16 md:h-[64px] w-auto object-contain" />
-              </a>
-            </div>
-            <button
-              type="button"
-              className="md:hidden text-deep-charcoal"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle navigation menu"
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? (
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              ) : (
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-            <div className="hidden md:flex h-full space-x-8 items-center">
-              <a href="/#features" className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
-              <a href="/#how-it-works" className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
-              <a href="/#reviews" className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href={`${appUrl}/login`} className="btn-secondary text-sm opacity-90">Artist Sign-In</a>
-            </div>
-          </div>
-        </div>
-        {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4">
-            <div className="flex flex-col gap-4">
-              <a href="/#features" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">Features</a>
-              <a href="/#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">How It Works</a>
-              <a href="/#reviews" onClick={() => setIsMobileMenuOpen(false)} className="text-deep-charcoal hover:text-tipwave-teal transition">Reviews</a>
-              <a href={`${appUrl}/login`} onClick={() => setIsMobileMenuOpen(false)} className="btn-secondary text-sm opacity-90 inline-block w-fit">Artist Sign-In</a>
-            </div>
-          </div>
-        )}
-      </nav>
+      <SiteNav appUrl={appUrl} />
 
-      <section className="bg-gradient-to-br from-white to-soft-gray">
-        <div className="section-container text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-deep-charcoal mb-6">Performer Help Center</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Your home for quick videos, tips, and guidance for using Tipwave.</p>
+      <section className="text-white" style={{
+          background:
+            'radial-gradient(60% 50% at 100% 0%, rgba(6,182,200,0.35), transparent 70%),' +
+            'radial-gradient(50% 45% at 0% 100%, rgba(229,84,140,0.26), transparent 70%),' +
+            'linear-gradient(160deg,#0a2533,#0d4254 60%,#0f3447)'
+        }}>
+        <div className="mx-auto max-w-4xl px-6 py-16 text-center md:py-24">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Performer Help Center</h1>
+          <p className="text-xl text-white/75 max-w-3xl mx-auto">Your home for quick videos, tips, and guidance for using Tipwave.</p>
         </div>
       </section>
 
@@ -116,7 +78,7 @@ export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
               <button
                 type="button"
                 onClick={handleCopyVideoLink}
-                className="inline-flex items-center px-5 py-3 rounded-full border-2 border-tipwave-magenta text-tipwave-magenta font-semibold hover:bg-tipwave-magenta hover:text-white transition-all duration-200"
+                className="inline-flex items-center px-5 py-3 rounded-full border-2 border-accent-500 text-accent-600 font-semibold hover:bg-accent-500 hover:text-white transition-all duration-200"
               >
                 {copyState === 'copied' ? 'Link Copied' : copyState === 'error' ? 'Copy Failed' : 'Copy Video Link'}
               </button>
@@ -168,54 +130,7 @@ export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
         </div>
       </section>
 
-      <footer className="bg-deep-charcoal text-white">
-        <div className="section-container">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="h-12 w-auto mb-4">
-                <img src={TipwaveLogo} alt="Tipwave" className="h-full" />
-              </div>
-              <p className="text-gray-400">
-                Tipwave makes appreciation impossible to miss—driving more tipping moments and creating a shared connection between performers and audiences.
-              </p>
-              <p className="text-gray-300 mt-4 font-medium">
-                Limited prototype spots available in Austin. Apply to become a Founding Performer.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Product</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/#apply-prototype-access" className="hover:text-white transition">Apply for Prototype Access</a></li>
-                <li><a href={`${appUrl}/login`} className="hover:text-white transition">Login</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-                <li className="text-gray-400">Contact: contact@tipwave.live</li>
-                <li className="text-gray-400">Call: 877-684-7928</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-bold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="/terms-of-service.html" className="hover:text-white transition">Terms of Service</a></li>
-                <li><a href="/privacy-policy.html" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="/acceptable-use-policy.html" className="hover:text-white transition">Acceptable Use</a></li>
-                <li><a href="/refund-policy.html" className="hover:text-white transition">Refund Policy</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>&copy; 2026 Tipwave. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter appUrl={appUrl} />
     </div>
   )
 }
