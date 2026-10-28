@@ -206,7 +206,7 @@ function HomePage({ appUrl, apiUrl }) {
             'linear-gradient(160deg,#0a2533,#0d4254 60%,#0f3447)'
         }}
       >
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-[1.2fr_0.8fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-[1fr_1fr]">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/20">
               <span className="h-2 w-2 rounded-full bg-accent-400" />
@@ -285,11 +285,12 @@ function HomePage({ appUrl, apiUrl }) {
             </p>
           </div>
 
-          <div className="mx-auto w-fit rounded-[2rem] bg-gradient-to-br from-brand-400 to-accent-500 p-1 shadow-lift">
-            <div className="aspect-[9/16] w-[230px] overflow-hidden rounded-[1.75rem] bg-black sm:w-[270px] lg:w-[300px]">
+          <div className="mx-auto w-full max-w-[600px] rounded-[1.5rem] bg-gradient-to-br from-brand-400 to-accent-500 p-1 shadow-lift">
+            <div className="aspect-video w-full overflow-hidden rounded-[1.25rem] bg-black">
               <video
                 className="h-full w-full object-contain"
-                src="https://d7skwhqoj49or.cloudfront.net/videos/tipwave-demo.mp4"
+                src="/videos/tipwave-artist-promo.mp4"
+                poster="/videos/tipwave-artist-promo-poster.jpg"
                 controls
                 loop
                 playsInline
