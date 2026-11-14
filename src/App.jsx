@@ -499,7 +499,7 @@ function HomePage({ appUrl, apiUrl }) {
               },
               {
                 quote: 'We play multiple nights a week, and Tipwave gives us instant clarity. The light-and-sound hit tells us the crowd is with us right now, not later. It changed our stage confidence.',
-                name: 'Marcus Chen',
+                name: 'Marcus Bridges',
                 role: 'Drummer, Austin, TX'
               },
               {
