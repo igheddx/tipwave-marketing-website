@@ -33,6 +33,11 @@ export default function WaitlistModal({ open, onClose, form, onChange, onSubmit,
             <input id="wl-email" type="email" name="email" autoComplete="email" value={form.email} onChange={onChange} required className={inputClass} placeholder="you@example.com" />
           </div>
           <div>
+            <label htmlFor="wl-location" className="mb-1.5 block text-sm font-semibold text-ink-700">Where do you perform?</label>
+            <input id="wl-location" type="text" name="location" autoComplete="address-level2" value={form.location} onChange={onChange} required maxLength={120} className={inputClass} placeholder="City, state (for example Austin, TX)" />
+            <p className="mt-1.5 text-xs text-ink-500">We are recruiting performers in Austin, TX first. Elsewhere? Apply anyway and we will tell you when we reach you.</p>
+          </div>
+          <div>
             <label htmlFor="wl-phone" className="mb-1.5 block text-sm font-semibold text-ink-700">
               Phone <span className="font-normal text-ink-500">(optional)</span>
             </label>

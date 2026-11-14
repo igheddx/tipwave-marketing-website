@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
 import SiteNav from '../components/SiteNav'
 import SiteFooter from '../components/SiteFooter'
 
 export default function AboutUs({ appUrl = 'https://app.tipwave.live' }) {
+  useEffect(() => {
+    document.title = 'About Tipwave | Tipwave'
+    return () => {
+      document.title = 'Tipwave | Light-and-sound tipping for live performers'
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
       <SiteNav appUrl={appUrl} />
@@ -58,13 +66,13 @@ export default function AboutUs({ appUrl = 'https://app.tipwave.live' }) {
                 <span className="block font-bold mt-2">Performers were giving everything, but receiving appreciation in silence.</span>
               </p>
               <p>
-                Dominic, our founder, spent countless nights watching artists pour themselves out on stage while tips arrived quietly on a screen. The gratitude was real, but the emotional moment was missing.
+                Our founder spent countless nights watching artists pour themselves out on stage while tips arrived quietly on a screen. The gratitude was real, but the emotional moment was missing.
               </p>
               <p>
-                He believed appreciation should be physical, visible, and immediate.
+                Our founder believed appreciation should be physical, visible, and immediate.
               </p>
               <p>
-                So he built Tipwave: hardware plus software that turns QR Code → Payment Method → Tip → Light & Sound Eruption into a single unforgettable stage moment.
+                So our founder built Tipwave: hardware plus software that turns QR Code → Payment Method → Tip → Light & Sound Eruption into a single unforgettable stage moment.
               </p>
             </div>
           </div>

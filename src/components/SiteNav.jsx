@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrandIcon } from './BrandIcons'
+import { TESTIMONIALS } from '../data/testimonials'
 
 /**
  * The top bar shared by every page. On the home page the section links scroll in place;
@@ -11,7 +12,7 @@ export default function SiteNav({ appUrl, onApply, home = false }) {
   const links = [
     { href: `${base}#features`, label: 'Features' },
     { href: `${base}#how-it-works`, label: 'How it works' },
-    { href: `${base}#reviews`, label: 'Reviews' },
+    ...(TESTIMONIALS.length > 0 ? [{ href: `${base}#reviews`, label: 'Reviews' }] : []),
     { href: '/performer-help', label: 'Help center' }
   ]
   const apply = onApply
