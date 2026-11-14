@@ -22,7 +22,7 @@ export default function PerformerHelp({ appUrl = 'https://app.tipwave.live' }) {
     metaDescription.setAttribute('content', 'Watch videos and explore guides to help you navigate the Tipwave performer platform.')
 
     return () => {
-      document.title = 'Tipwave'
+      document.title = 'Tipwave | Light-and-sound tipping for live performers'
     }
   }, [])
 

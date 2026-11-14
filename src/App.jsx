@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import SiteNav from './components/SiteNav'
 import SiteFooter from './components/SiteFooter'
 import WaitlistModal from './components/WaitlistModal'
+import { TESTIMONIALS } from './data/testimonials'
 import { BrandIcon } from './components/BrandIcons'
 import logger from './utils/logger'
 import AboutUs from './pages/AboutUs'
@@ -57,6 +58,7 @@ function HomePage({ appUrl, apiUrl }) {
     firstName: '',
     lastName: '',
     email: '',
+    location: '',
     phone: ''
   })
   const [waitlistSubmitting, setWaitlistSubmitting] = useState(false)
@@ -141,13 +143,14 @@ function HomePage({ appUrl, apiUrl }) {
           firstName: waitlistForm.firstName,
           lastName: waitlistForm.lastName,
           email: waitlistForm.email,
+          location: waitlistForm.location.trim(),
           phone: waitlistForm.phone || ''
         })
       })
 
       if (response.ok) {
         setWaitlistMessage('Success! We\'ll be in touch soon.')
-        setWaitlistForm({ firstName: '', lastName: '', email: '', phone: '' })
+        setWaitlistForm({ firstName: '', lastName: '', email: '', location: '', phone: '' })
         setTimeout(() => setShowWaitlistForm(false), 2000)
       } else {
         setWaitlistMessage('Something went wrong. Please try again.')
@@ -484,6 +487,7 @@ function HomePage({ appUrl, apiUrl }) {
       </section>
 
       {/* Testimonials */}
+      {TESTIMONIALS.length > 0 && (
       <section id="reviews" className="bg-white">
         <div className="section-container">
           <div className="text-center">
@@ -491,23 +495,7 @@ function HomePage({ appUrl, apiUrl }) {
             <h2 className="text-3xl font-bold md:text-4xl">What artists are saying</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                quote: 'When the cylinder erupts, the room changes instantly. People cheer, phones come up, and the connection feels undeniable. My tip volume and crowd energy both jumped.',
-                name: 'Sarah Mitchell',
-                role: 'Singer-Songwriter, Austin, TX'
-              },
-              {
-                quote: 'We play multiple nights a week, and Tipwave gives us instant clarity. The light-and-sound hit tells us the crowd is with us right now, not later. It changed our stage confidence.',
-                name: 'Marcus Bridges',
-                role: 'Drummer, Austin, TX'
-              },
-              {
-                quote: 'As a busker, visible feedback matters. The eruption stops people in their tracks, invites more tips, and makes every contribution feel celebrated in public.',
-                name: 'Alex Rivera',
-                role: 'Street Busker, Austin, TX'
-              }
-            ].map(t => (
+            {TESTIMONIALS.map(t => (
               <figure key={t.name} className="rounded-2xl border border-slate-100 bg-surface p-8">
                 <div className="flex gap-1 text-amber-400" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
@@ -526,6 +514,7 @@ function HomePage({ appUrl, apiUrl }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* Closing call to action */}
       <section

@@ -1,7 +1,15 @@
+import { useEffect } from 'react'
 import SiteNav from '../components/SiteNav'
 import SiteFooter from '../components/SiteFooter'
 
 export default function AboutUs({ appUrl = 'https://app.tipwave.live' }) {
+  useEffect(() => {
+    document.title = 'About Tipwave | Tipwave'
+    return () => {
+      document.title = 'Tipwave | Light-and-sound tipping for live performers'
+    }
+  }, [])
+
   return (
     <div className="min-h-screen">
       <SiteNav appUrl={appUrl} />
